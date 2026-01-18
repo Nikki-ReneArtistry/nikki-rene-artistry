@@ -5,9 +5,19 @@ import heroArt from "@/assets/hero-art.jpg";
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
 
   useEffect(() => {
     setIsVisible(true);
+
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setHasScrolled(true);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
@@ -81,8 +91,8 @@ const HeroSection = () => {
 
       {/* Scroll Indicator */}
       <div
-        className={`absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-all duration-1000 delay-1000 ${
-          isVisible ? "opacity-100" : "opacity-0"
+        className={`absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-all duration-500 ${
+          isVisible && !hasScrolled ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       >
         <span className="text-xs font-sans tracking-wider text-foreground/75">scroll down</span>
