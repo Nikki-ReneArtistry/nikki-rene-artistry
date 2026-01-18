@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { ChevronDown } from "lucide-react";
 import heroArt from "@/assets/hero-art.jpg";
 
 const HeroSection = () => {
@@ -80,13 +81,12 @@ const HeroSection = () => {
 
       {/* Scroll Indicator */}
       <div
-        className={`absolute bottom-12 left-1/2 -translate-x-1/2 transition-all duration-1000 delay-1000 ${
+        className={`absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 transition-all duration-1000 delay-1000 ${
           isVisible ? "opacity-100" : "opacity-0"
         }`}
       >
-        <div className="w-6 h-10 border-2 border-foreground/20 rounded-full flex justify-center">
-          <div className="w-1 h-2 bg-primary rounded-full mt-2 animate-bounce" />
-        </div>
+        <span className="text-xs font-sans tracking-wider text-foreground/75">scroll down</span>
+        <ChevronDown className="w-4 h-4 text-foreground/75 animate-bounce" />
       </div>
     </section>
   );
