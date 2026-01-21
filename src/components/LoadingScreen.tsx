@@ -25,14 +25,15 @@ const LoadingScreen = ({ onComplete, minDuration = 2000 }: LoadingScreenProps) =
       }`}
     >
       <div className={`text-center transition-all duration-700 ${isExiting ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
-        {/* Logo centered on circle */}
-        <div className="mb-8 w-80 h-80 mx-auto rounded-full border-2 border-primary/30 flex items-center justify-center relative">
-          {/* Purple circle behind */}
-          <div className="w-72 h-72 rounded-full bg-gradient-to-br from-primary/25 to-primary/5 animate-pulse" />
+        {/* Logo and circle container - perfectly centered */}
+        <div className="mb-8 w-80 h-80 mx-auto relative flex items-center justify-center">
+          {/* Purple circle - centered */}
+          <div className="absolute inset-0 m-auto w-72 h-72 rounded-full border-2 border-primary/30 bg-gradient-to-br from-primary/25 to-primary/5 animate-pulse" />
+          {/* Logo - centered on top */}
           <img 
             src={logo} 
             alt="Nikki Rene Artistry Logo" 
-            className="absolute left-1/2 top-1/2 z-10 h-80 w-80 -translate-x-1/2 -translate-y-1/2 object-contain"
+            className="relative z-10 h-80 w-80 object-contain"
           />
         </div>
         
