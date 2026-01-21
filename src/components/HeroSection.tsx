@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import heroArt from "@/assets/hero-art.jpg";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-new.png";
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -50,11 +50,11 @@ const HeroSection = () => {
         </div>
 
         <div className="relative">
-          {/* Logo behind text at 50% opacity */}
+          {/* Logo behind text at 50% opacity - 3x bigger */}
           <img 
             src={logo} 
             alt="" 
-            className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-48 md:w-64 lg:w-80 opacity-50 pointer-events-none transition-all duration-1000 delay-500 ${
+            className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[36rem] md:w-[48rem] lg:w-[60rem] opacity-50 pointer-events-none transition-all duration-1000 delay-500 ${
               isVisible ? "scale-100" : "scale-90"
             }`}
           />
