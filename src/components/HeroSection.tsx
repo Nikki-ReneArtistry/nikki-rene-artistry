@@ -93,12 +93,12 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Right side - Logo at 75% opacity, reduced size */}
+          {/* Right side - Logo at 75% opacity, increased size */}
           <div className="lg:w-1/2 flex justify-center lg:justify-end">
             <img 
               src={logo} 
               alt="" 
-              className={`w-[18rem] md:w-[24rem] lg:w-[30rem] opacity-75 pointer-events-none transition-all duration-1000 delay-500 ${
+              className={`w-[32rem] md:w-[40rem] lg:w-[52rem] opacity-75 pointer-events-none transition-all duration-1000 delay-500 ${
                 isVisible ? "scale-100" : "scale-90"
               }`}
             />
