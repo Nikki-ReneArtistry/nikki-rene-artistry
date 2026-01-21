@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { ChevronDown } from "lucide-react";
 import heroArt from "@/assets/hero-art.jpg";
+import logo from "@/assets/logo.png";
 
 const HeroSection = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -48,17 +49,27 @@ const HeroSection = () => {
           </p>
         </div>
 
-        <h1
-          className={`font-serif text-5xl md:text-7xl lg:text-8xl leading-tight mb-8 text-foreground transition-all duration-1000 delay-500 ${
-            isVisible
-              ? "opacity-100 translate-y-0"
-              : "opacity-0 translate-y-8"
-          }`}
-        >
-          Where Art
-          <br />
-          <span className="italic text-primary">Meets Soul</span>
-        </h1>
+        <div className="relative">
+          {/* Logo behind text at 50% opacity */}
+          <img 
+            src={logo} 
+            alt="" 
+            className={`absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-48 md:w-64 lg:w-80 opacity-50 pointer-events-none transition-all duration-1000 delay-500 ${
+              isVisible ? "scale-100" : "scale-90"
+            }`}
+          />
+          <h1
+            className={`relative z-10 font-serif text-5xl md:text-7xl lg:text-8xl leading-tight mb-8 text-foreground transition-all duration-1000 delay-500 ${
+              isVisible
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-8"
+            }`}
+          >
+            Where Art
+            <br />
+            <span className="italic text-primary">Meets Soul</span>
+          </h1>
+        </div>
 
         <p
           className={`font-sans text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 transition-all duration-1000 delay-700 ${
