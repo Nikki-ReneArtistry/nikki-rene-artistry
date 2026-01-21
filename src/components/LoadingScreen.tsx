@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import logo from '@/assets/logo.png';
 
 interface LoadingScreenProps {
   onComplete: () => void;
@@ -24,9 +25,14 @@ const LoadingScreen = ({ onComplete, minDuration = 2000 }: LoadingScreenProps) =
       }`}
     >
       <div className={`text-center transition-all duration-700 ${isExiting ? 'opacity-0 scale-95' : 'opacity-100 scale-100'}`}>
-        {/* Placeholder for future logo/graphic */}
-        <div className="mb-8 w-24 h-24 mx-auto rounded-full border-2 border-primary/30 flex items-center justify-center">
+        {/* Logo centered on circle */}
+        <div className="mb-8 w-24 h-24 mx-auto rounded-full border-2 border-primary/30 flex items-center justify-center relative">
           <div className="w-16 h-16 rounded-full bg-gradient-to-br from-primary/20 to-primary/5 animate-pulse" />
+          <img 
+            src={logo} 
+            alt="Nikki Rene Artistry Logo" 
+            className="absolute inset-0 w-20 h-20 m-auto object-contain"
+          />
         </div>
         
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-serif tracking-wider text-foreground mb-4 fade-in-up">
