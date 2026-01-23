@@ -8,8 +8,10 @@ interface LoadingScreenProps {
 
 interface Butterfly {
   id: number;
-  x: number;
-  y: number;
+  startX: number;
+  startY: number;
+  endX: number;
+  endY: number;
   size: number;
   delay: number;
   duration: number;
@@ -25,17 +27,29 @@ const LoadingScreen = ({ onComplete, minDuration = 5550 }: LoadingScreenProps) =
     // Fade in after mount
     setTimeout(() => setIsVisible(true), 100);
 
-    // Generate butterflies after logo appears
+    // Generate butterflies after logo appears - starting from circle edge
     setTimeout(() => {
-      const newButterflies: Butterfly[] = Array.from({ length: 12 }, (_, i) => ({
-        id: i,
-        x: (Math.random() - 0.5) * 600,
-        y: (Math.random() - 0.5) * 600,
-        size: 16 + Math.random() * 12,
-        delay: Math.random() * 2,
-        duration: 3 + Math.random() * 2,
-        angle: Math.random() * 360,
-      }));
+      const circleRadius = 320; // Half of the 2x logo size (640/2)
+      const newButterflies: Butterfly[] = Array.from({ length: 14 }, (_, i) => {
+        const startAngle = (i / 14) * Math.PI * 2 + Math.random() * 0.3;
+        const startX = Math.cos(startAngle) * circleRadius;
+        const startY = Math.sin(startAngle) * circleRadius;
+        const flyDistance = 300 + Math.random() * 400;
+        const endX = Math.cos(startAngle) * (circleRadius + flyDistance);
+        const endY = Math.sin(startAngle) * (circleRadius + flyDistance);
+        
+        return {
+          id: i,
+          startX,
+          startY,
+          endX,
+          endY,
+          size: 32 + Math.random() * 24,
+          delay: Math.random() * 2.5,
+          duration: 3 + Math.random() * 2,
+          angle: (startAngle * 180 / Math.PI) + 90,
+        };
+      });
       setButterflies(newButterflies);
     }, 800);
     
@@ -59,20 +73,22 @@ const LoadingScreen = ({ onComplete, minDuration = 5550 }: LoadingScreenProps) =
           <img 
             src={logo} 
             alt="Nikki Rene Artistry Logo" 
-            className={`h-80 w-80 object-contain transition-opacity duration-1000 ${
+            className={`h-[40rem] w-[40rem] object-contain transition-opacity duration-1000 ${
               isVisible ? 'opacity-100' : 'opacity-0'
             }`}
           />
           
-          {/* Lavender butterflies flying from center */}
+          {/* Lavender butterflies flying from circle edge outward */}
           {butterflies.map((butterfly) => (
             <div
               key={butterfly.id}
               className="absolute pointer-events-none"
               style={{
-                animation: `flyAway ${butterfly.duration}s ease-out ${butterfly.delay}s forwards`,
-                '--fly-x': `${butterfly.x}px`,
-                '--fly-y': `${butterfly.y}px`,
+                animation: `flyFromEdge ${butterfly.duration}s ease-out ${butterfly.delay}s forwards`,
+                '--start-x': `${butterfly.startX}px`,
+                '--start-y': `${butterfly.startY}px`,
+                '--end-x': `${butterfly.endX}px`,
+                '--end-y': `${butterfly.endY}px`,
                 '--rotate': `${butterfly.angle}deg`,
               } as React.CSSProperties}
             >
@@ -89,27 +105,27 @@ const LoadingScreen = ({ onComplete, minDuration = 5550 }: LoadingScreenProps) =
                 {/* Left wing */}
                 <path
                   d="M12 12C12 12 6 8 4 5C2 2 3 1 5 2C7 3 12 8 12 12Z"
-                  fill="hsl(259, 77%, 64%)"
-                  fillOpacity="0.7"
+                  fill="#efdcff"
+                  fillOpacity="0.9"
                 />
                 <path
                   d="M12 12C12 12 5 14 2 16C-1 18 -1 20 1 19C3 18 12 14 12 12Z"
-                  fill="hsl(259, 60%, 74%)"
-                  fillOpacity="0.6"
+                  fill="#efdcff"
+                  fillOpacity="0.7"
                 />
                 {/* Right wing */}
                 <path
                   d="M12 12C12 12 18 8 20 5C22 2 21 1 19 2C17 3 12 8 12 12Z"
-                  fill="hsl(259, 77%, 64%)"
-                  fillOpacity="0.7"
+                  fill="#efdcff"
+                  fillOpacity="0.9"
                 />
                 <path
                   d="M12 12C12 12 19 14 22 16C25 18 25 20 23 19C21 18 12 14 12 12Z"
-                  fill="hsl(259, 60%, 74%)"
-                  fillOpacity="0.6"
+                  fill="#efdcff"
+                  fillOpacity="0.7"
                 />
                 {/* Body */}
-                <ellipse cx="12" cy="12" rx="1" ry="4" fill="hsl(259, 50%, 45%)" />
+                <ellipse cx="12" cy="12" rx="1" ry="4" fill="#d4b8e8" />
               </svg>
             </div>
           ))}
@@ -131,17 +147,17 @@ const LoadingScreen = ({ onComplete, minDuration = 5550 }: LoadingScreenProps) =
       </div>
 
       <style>{`
-        @keyframes flyAway {
+        @keyframes flyFromEdge {
           0% {
-            transform: translate(0, 0) rotate(0deg) scale(0);
+            transform: translate(var(--start-x), var(--start-y)) rotate(var(--rotate)) scale(0);
             opacity: 0;
           }
-          10% {
+          15% {
             opacity: 1;
-            transform: translate(0, 0) rotate(0deg) scale(1);
+            transform: translate(var(--start-x), var(--start-y)) rotate(var(--rotate)) scale(1);
           }
           100% {
-            transform: translate(var(--fly-x), var(--fly-y)) rotate(var(--rotate)) scale(0.6);
+            transform: translate(var(--end-x), var(--end-y)) rotate(var(--rotate)) scale(0.7);
             opacity: 0;
           }
         }
