@@ -23,6 +23,10 @@ const LoadingScreen = ({ onComplete, minDuration = 5550 }: LoadingScreenProps) =
   const [isVisible, setIsVisible] = useState(false);
   const [butterflies, setButterflies] = useState<Butterfly[]>([]);
 
+  // This logo PNG's artwork isn't visually centered within its bounding box (circle on left, butterfly on right).
+  // We nudge the image left slightly so the circle appears centered on the page.
+  const logoVisualOffsetClass = "-translate-x-10";
+
   useEffect(() => {
     // Fade in after mount
     setTimeout(() => setIsVisible(true), 100);
@@ -73,7 +77,7 @@ const LoadingScreen = ({ onComplete, minDuration = 5550 }: LoadingScreenProps) =
           <img 
             src={logo} 
             alt="Nikki Rene Artistry Logo" 
-            className={`h-[40rem] w-[40rem] object-contain transition-opacity duration-1000 ${
+            className={`h-[40rem] w-[40rem] object-contain transition-opacity duration-1000 transform-gpu ${logoVisualOffsetClass} ${
               isVisible ? 'opacity-100' : 'opacity-0'
             }`}
           />
@@ -90,6 +94,11 @@ const LoadingScreen = ({ onComplete, minDuration = 5550 }: LoadingScreenProps) =
                 '--end-x': `${butterfly.endX}px`,
                 '--end-y': `${butterfly.endY}px`,
                 '--rotate': `${butterfly.angle}deg`,
+                // IMPORTANT: Before the animation starts (during the delay), we must still be invisible and
+                // positioned on the circle edge. Otherwise the browser may briefly render at (0,0) (center).
+                opacity: 0,
+                transform: 'translate(var(--start-x), var(--start-y)) rotate(var(--rotate)) scale(1)',
+                willChange: 'transform, opacity',
               } as React.CSSProperties}
             >
               <svg
