@@ -27,11 +27,11 @@ const LoadingScreen = ({ onComplete, minDuration = 5550 }: LoadingScreenProps) =
     // Fade in after mount
     setTimeout(() => setIsVisible(true), 100);
 
-    // Generate butterflies after logo appears - starting from circle edge
+    // Generate butterflies after logo appears - starting from circle edge only
     setTimeout(() => {
-      const circleRadius = 320; // Half of the 2x logo size (640/2)
-      const newButterflies: Butterfly[] = Array.from({ length: 14 }, (_, i) => {
-        const startAngle = (i / 14) * Math.PI * 2 + Math.random() * 0.3;
+      const circleRadius = 280; // Radius where butterflies spawn (edge of circle in logo)
+      const newButterflies: Butterfly[] = Array.from({ length: 28 }, (_, i) => {
+        const startAngle = (i / 28) * Math.PI * 2 + Math.random() * 0.2;
         const startX = Math.cos(startAngle) * circleRadius;
         const startY = Math.sin(startAngle) * circleRadius;
         const flyDistance = 300 + Math.random() * 400;
@@ -149,10 +149,10 @@ const LoadingScreen = ({ onComplete, minDuration = 5550 }: LoadingScreenProps) =
       <style>{`
         @keyframes flyFromEdge {
           0% {
-            transform: translate(var(--start-x), var(--start-y)) rotate(var(--rotate)) scale(0);
+            transform: translate(var(--start-x), var(--start-y)) rotate(var(--rotate)) scale(1);
             opacity: 0;
           }
-          15% {
+          10% {
             opacity: 1;
             transform: translate(var(--start-x), var(--start-y)) rotate(var(--rotate)) scale(1);
           }
