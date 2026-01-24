@@ -67,7 +67,7 @@ const LoadingScreen = ({ onComplete, minDuration = 5550 }: LoadingScreenProps) =
 
   return (
     <div 
-      className={`fixed inset-0 z-[100] flex items-center justify-center bg-background transition-opacity duration-700 ${
+      className={`fixed inset-0 z-[100] flex items-center justify-end pr-16 md:pr-24 lg:pr-32 bg-background transition-opacity duration-700 ${
         isExiting ? 'opacity-0' : 'opacity-100'
       }`}
     >
