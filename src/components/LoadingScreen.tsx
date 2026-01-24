@@ -23,7 +23,9 @@ const LoadingScreen = ({ onComplete, minDuration = 5550 }: LoadingScreenProps) =
   const [isVisible, setIsVisible] = useState(false);
   const [butterflies, setButterflies] = useState<Butterfly[]>([]);
 
-  // Logo offset: positive marginLeft moves the logo to the right
+  // Logo offset (in px). This moves the logo + butterflies together, without affecting the text.
+  // Use small values like -10, -5, 0, 5, 10.
+  const logoOffsetPx = 0;
 
   useEffect(() => {
     // Fade in after mount
@@ -73,14 +75,16 @@ const LoadingScreen = ({ onComplete, minDuration = 5550 }: LoadingScreenProps) =
         className={`text-center transition-all duration-700 ${isExiting ? "opacity-0 scale-95" : "opacity-100 scale-100"}`}
       >
         {/* Logo with fade in/out animation and butterflies */}
-        <div className="mb-8 flex items-center justify-center relative">
+        <div
+          className="mb-8 flex items-center justify-center relative"
+          style={{ transform: `translateX(${logoOffsetPx}px)` }}
+        >
           <img
             src={logo}
             alt="Nikki Rene Artistry Logo"
             className={`h-[40rem] w-[40rem] object-contain transition-opacity duration-1000 ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
-            style={{ marginLeft: '20px' }}
           />
 
           {/* Lavender butterflies flying from circle edge outward */}
