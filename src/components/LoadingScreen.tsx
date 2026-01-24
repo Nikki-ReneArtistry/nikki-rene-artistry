@@ -23,9 +23,7 @@ const LoadingScreen = ({ onComplete, minDuration = 5550 }: LoadingScreenProps) =
   const [isVisible, setIsVisible] = useState(false);
   const [butterflies, setButterflies] = useState<Butterfly[]>([]);
 
-  // This logo PNG's artwork isn't visually centered within its bounding box (circle on left, butterfly on right).
-  // We nudge the image left slightly so the circle appears centered on the page.
-  const logoVisualOffsetClass = "-translate-x-[70px]";
+  // Logo offset: positive marginLeft moves the logo to the right
 
   useEffect(() => {
     // Fade in after mount
@@ -79,9 +77,10 @@ const LoadingScreen = ({ onComplete, minDuration = 5550 }: LoadingScreenProps) =
           <img
             src={logo}
             alt="Nikki Rene Artistry Logo"
-            className={`h-[40rem] w-[40rem] object-contain transition-opacity duration-1000 transform-gpu ${logoVisualOffsetClass} ${
+            className={`h-[40rem] w-[40rem] object-contain transition-opacity duration-1000 ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
+            style={{ marginLeft: '10px' }}
           />
 
           {/* Lavender butterflies flying from circle edge outward */}
