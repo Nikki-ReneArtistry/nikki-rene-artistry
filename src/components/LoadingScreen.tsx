@@ -80,7 +80,7 @@ const LoadingScreen = ({ onComplete, minDuration = 5550 }: LoadingScreenProps) =
             className={`h-[40rem] w-[40rem] object-contain transition-opacity duration-1000 ${
               isVisible ? "opacity-100" : "opacity-0"
             }`}
-            style={{ marginLeft: '10px' }}
+            style={{ marginLeft: '20px' }}
           />
 
           {/* Lavender butterflies flying from circle edge outward */}
