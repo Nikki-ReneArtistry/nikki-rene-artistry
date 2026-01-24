@@ -25,7 +25,7 @@ const LoadingScreen = ({ onComplete, minDuration = 5550 }: LoadingScreenProps) =
 
   // This logo PNG's artwork isn't visually centered within its bounding box (circle on left, butterfly on right).
   // We nudge the image left slightly so the circle appears centered on the page.
-  const logoVisualOffsetClass = "-translate-x-20";
+  const logoVisualOffsetClass = "-translate-x-[70px]";
 
   useEffect(() => {
     // Fade in after mount
