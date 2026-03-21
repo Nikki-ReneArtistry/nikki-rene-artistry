@@ -85,7 +85,7 @@ const ArtworkDetail = () => {
                 </div>
                 <div className="flex-1">
                   <p className="font-sans text-sm font-medium">See it in your space</p>
-                  <p className="font-sans text-xs text-muted-foreground">AI room visualizer coming soon</p>
+                  <p className="font-sans text-xs text-muted-foreground">Room Visualizer — Coming Soon</p>
                 </div>
                 <span className="font-sans text-[10px] uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-full">
                   Soon
