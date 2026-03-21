@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft } from "lucide-react";
+import { ArrowLeft, ShoppingBag, ImageIcon, Sparkles, Shield, Truck, Award } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getArtworkById, artworks } from "@/data/artworks";
@@ -14,6 +14,7 @@ const ArtworkDetail = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    setIsVisible(false);
     setTimeout(() => setIsVisible(true), 100);
   }, [id]);
 
@@ -38,7 +39,6 @@ const ArtworkDetail = () => {
     );
   }
 
-  // Get related artworks (excluding current)
   const relatedArtworks = artworks
     .filter((a) => a.id !== artwork.id)
     .slice(0, 3);
@@ -52,7 +52,9 @@ const ArtworkDetail = () => {
           {/* Back Link */}
           <Link
             to="/collection"
-            className="inline-flex items-center gap-2 font-sans text-sm text-muted-foreground hover:text-primary transition-colors mb-8"
+            className={`inline-flex items-center gap-2 font-sans text-sm text-muted-foreground hover:text-primary transition-all duration-500 mb-8 ${
+              isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
+            }`}
           >
             <ArrowLeft size={16} />
             Back to Collection
@@ -64,16 +66,30 @@ const ArtworkDetail = () => {
             <div
               className={`transition-all duration-1000 ${
                 isVisible
-                  ? "opacity-100 translate-x-0"
-                  : "opacity-0 -translate-x-8"
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
               }`}
             >
-              <div className="aspect-square overflow-hidden rounded-lg shadow-2xl">
+              <div className="aspect-square overflow-hidden rounded-lg shadow-2xl bg-secondary">
                 <img
                   src={artwork.image}
                   alt={artwork.title}
                   className="w-full h-full object-cover"
                 />
+              </div>
+
+              {/* Visualizer CTA under image */}
+              <div className="mt-4 p-4 bg-secondary rounded-lg flex items-center gap-3">
+                <div className="p-2 bg-primary/10 rounded-lg">
+                  <ImageIcon size={18} className="text-primary" />
+                </div>
+                <div className="flex-1">
+                  <p className="font-sans text-sm font-medium">See it in your space</p>
+                  <p className="font-sans text-xs text-muted-foreground">AI room visualizer coming soon</p>
+                </div>
+                <span className="font-sans text-[10px] uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-full">
+                  Soon
+                </span>
               </div>
             </div>
 
@@ -81,8 +97,8 @@ const ArtworkDetail = () => {
             <div
               className={`transition-all duration-1000 delay-200 ${
                 isVisible
-                  ? "opacity-100 translate-x-0"
-                  : "opacity-0 translate-x-8"
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
               }`}
             >
               <p className="font-sans text-xs uppercase tracking-[0.3em] text-primary mb-4">
@@ -93,69 +109,76 @@ const ArtworkDetail = () => {
                 {artwork.title}
               </h1>
 
-              <p className="font-serif italic text-muted-foreground text-lg mb-8">
+              <p className="font-serif italic text-muted-foreground text-lg mb-6">
                 No Two Alike.
               </p>
+
+              {/* Price prominent */}
+              <div className="mb-6">
+                <p className="font-serif text-4xl text-primary">
+                  ${artwork.price.toLocaleString()}
+                </p>
+              </div>
 
               <p className="font-sans text-foreground/80 leading-relaxed mb-8">
                 {artwork.description}
               </p>
 
               {/* Specs */}
-              <div className="grid grid-cols-2 gap-6 mb-8 py-8 border-y border-border">
+              <div className="grid grid-cols-2 gap-6 mb-8 py-6 border-y border-border">
                 <div>
-                  <p className="font-sans text-xs uppercase tracking-wider text-muted-foreground mb-1">
+                  <p className="font-sans text-[11px] uppercase tracking-wider text-muted-foreground mb-1">
                     Medium
                   </p>
-                  <p className="font-sans">{artwork.medium}</p>
+                  <p className="font-sans text-sm">{artwork.medium}</p>
                 </div>
                 <div>
-                  <p className="font-sans text-xs uppercase tracking-wider text-muted-foreground mb-1">
+                  <p className="font-sans text-[11px] uppercase tracking-wider text-muted-foreground mb-1">
                     Size
                   </p>
-                  <p className="font-sans">{artwork.size}</p>
+                  <p className="font-sans text-sm">{artwork.size}</p>
                 </div>
                 <div>
-                  <p className="font-sans text-xs uppercase tracking-wider text-muted-foreground mb-1">
+                  <p className="font-sans text-[11px] uppercase tracking-wider text-muted-foreground mb-1">
                     Year
                   </p>
-                  <p className="font-sans">{artwork.year}</p>
+                  <p className="font-sans text-sm">{artwork.year}</p>
                 </div>
                 <div>
-                  <p className="font-sans text-xs uppercase tracking-wider text-muted-foreground mb-1">
-                    Availability
+                  <p className="font-sans text-[11px] uppercase tracking-wider text-muted-foreground mb-1">
+                    Status
                   </p>
-                  <p className={`font-sans ${artwork.available ? "text-primary" : "text-muted-foreground"}`}>
+                  <p className={`font-sans text-sm font-medium ${artwork.available ? "text-primary" : "text-muted-foreground"}`}>
                     {artwork.available ? "Available" : "Sold"}
                   </p>
                 </div>
               </div>
 
-              {/* Price & Purchase */}
-              <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
-                <div>
-                  <p className="font-sans text-xs uppercase tracking-wider text-muted-foreground mb-1">
-                    Price
-                  </p>
-                  <p className="font-serif text-3xl text-primary">
-                    ${artwork.price.toLocaleString()}
-                  </p>
+              {/* Purchase Button */}
+              <Button
+                onClick={handlePurchaseClick}
+                disabled={!artwork.available}
+                className="btn-primary w-full gap-2 text-base py-6 mb-4"
+              >
+                <ShoppingBag size={18} />
+                {artwork.available ? "Purchase This Piece" : "Sold"}
+              </Button>
+
+              {/* Trust Badges */}
+              <div className="grid grid-cols-3 gap-3 mt-6">
+                <div className="flex flex-col items-center text-center gap-1.5 p-3 rounded-lg bg-secondary">
+                  <Truck size={16} className="text-primary" />
+                  <span className="font-sans text-[10px] text-muted-foreground uppercase tracking-wider">Free Shipping</span>
                 </div>
-
-                <Button
-                  onClick={handlePurchaseClick}
-                  disabled={!artwork.available}
-                  className="btn-primary w-full sm:w-auto"
-                >
-                  {artwork.available ? "Purchase This Piece" : "Sold"}
-                </Button>
+                <div className="flex flex-col items-center text-center gap-1.5 p-3 rounded-lg bg-secondary">
+                  <Award size={16} className="text-primary" />
+                  <span className="font-sans text-[10px] text-muted-foreground uppercase tracking-wider">Authenticated</span>
+                </div>
+                <div className="flex flex-col items-center text-center gap-1.5 p-3 rounded-lg bg-secondary">
+                  <Shield size={16} className="text-primary" />
+                  <span className="font-sans text-[10px] text-muted-foreground uppercase tracking-wider">Secure Payment</span>
+                </div>
               </div>
-
-              {/* Shipping Note */}
-              <p className="font-sans text-sm text-muted-foreground mt-6">
-                Free shipping worldwide. Each piece comes with a certificate of
-                authenticity signed by the artist.
-              </p>
             </div>
           </div>
 
@@ -175,14 +198,14 @@ const ArtworkDetail = () => {
                     <img
                       src={related.image}
                       alt={related.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     />
                   </div>
                   <div className="p-4">
                     <h3 className="font-serif text-lg group-hover:text-primary transition-colors">
                       {related.title}
                     </h3>
-                    <p className="font-sans text-sm text-muted-foreground">
+                    <p className="font-sans text-sm text-primary font-medium">
                       ${related.price.toLocaleString()}
                     </p>
                   </div>
