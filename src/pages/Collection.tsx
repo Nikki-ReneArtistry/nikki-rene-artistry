@@ -184,7 +184,7 @@ const Collection = () => {
             </h2>
             <p className="font-sans text-muted-foreground mb-8 leading-relaxed">
               Upload a photo of your room and visualize how any piece from our
-              collection will look on your wall. Powered by AI, this feature
+              collection will look on your wall. This feature
               will help you find the perfect artwork for your space.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
