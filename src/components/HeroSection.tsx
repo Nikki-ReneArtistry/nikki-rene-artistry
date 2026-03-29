@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, Facebook, Instagram } from "lucide-react";
 import heroArt from "@/assets/hero-art.jpg";
 import logo from "@/assets/logo-new.png";
 
