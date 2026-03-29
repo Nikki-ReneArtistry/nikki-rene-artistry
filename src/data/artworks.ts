@@ -4,6 +4,7 @@ import art3 from "@/assets/art-3.jpg";
 import art4 from "@/assets/art-4.jpg";
 import art5 from "@/assets/art-5.jpg";
 import amazeImg from "@/assets/amaze.jpg";
+import unprecedentedImg from "@/assets/unprecedented.jpg";
 
 export interface Artwork {
   id: string;
@@ -98,6 +99,20 @@ export const artworks: Artwork[] = [
     available: true,
     collection: "Whispers of Light",
     paymentLink: "https://buy.stripe.com/bJebJ2f7K32l0IV0bk2oE00",
+  },
+  {
+    id: "unprecedented",
+    title: "Unprecedented",
+    description:
+      "A stunning circular mixed media piece featuring a mosaic of earth tones — forest green, gold, crimson, navy, and warm browns — divided by raised gold borders and adorned with textured resin orbs. A rich, tactile work that celebrates color and form.",
+    image: unprecedentedImg,
+    price: 175,
+    size: '16"',
+    medium: "Mixed Media",
+    year: 2024,
+    available: true,
+    collection: "Whispers of Light",
+    paymentLink: "https://buy.stripe.com/cNi6oI4t646pezL2js2oE01",
   },
 ];
 
