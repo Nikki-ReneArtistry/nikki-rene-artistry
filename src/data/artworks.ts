@@ -115,6 +115,20 @@ export const artworks: Artwork[] = [
     collection: "Whispers of Light",
     paymentLink: "https://buy.stripe.com/cNi6oI4t646pezL2js2oE01",
   },
+  {
+    id: "the-tall-ones",
+    title: "The Tall Ones",
+    description:
+      "A richly layered mixed media collage celebrating the majesty of giraffes amidst an African landscape. Animal prints, tropical leaves, and textured borders create a vibrant tapestry of wildlife and pattern.",
+    image: tallOnesImg,
+    price: 175,
+    size: '11" × 14"',
+    medium: "Mixed Media Collage",
+    year: 2024,
+    available: true,
+    collection: "Whispers of Light",
+    paymentLink: "https://buy.stripe.com/00w7sM2kYgTb2R33nw2oE02",
+  },
 ];
 
 export const getArtworkById = (id: string): Artwork | undefined => {
