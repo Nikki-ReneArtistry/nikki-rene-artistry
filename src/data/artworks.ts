@@ -84,6 +84,20 @@ export const artworks: Artwork[] = [
     available: true,
     collection: "Whispers of Light",
   },
+  {
+    id: "amaze",
+    title: "Amaze",
+    description:
+      "A captivating piece that draws you in with its bold presence and intricate detail. 'Amaze' invites wonder and contemplation, transforming any space it inhabits.",
+    image: "https://files.stripe.com/links/MDB8YWNjdF8xVDdnNjZKdUg1WEdPZEx1fGZsX2xpdmVfUDR6Z0ZCWHFhYW85bDMzT1JpaEpFbEpG",
+    price: 175,
+    size: '16"',
+    medium: "Mixed Media",
+    year: 2024,
+    available: true,
+    collection: "Whispers of Light",
+    paymentLink: "https://buy.stripe.com/bJebJ2f7K32l0IV0bk2oE00",
+  },
 ];
 
 export const getArtworkById = (id: string): Artwork | undefined => {

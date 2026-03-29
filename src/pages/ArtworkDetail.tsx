@@ -19,11 +19,15 @@ const ArtworkDetail = () => {
   }, [id]);
 
   const handlePurchaseClick = () => {
-    toast({
-      title: "Coming Soon",
-      description:
-        "Stripe checkout is being set up. Contact us directly to purchase this piece.",
-    });
+    if (artwork?.paymentLink) {
+      window.open(artwork.paymentLink, "_blank", "noopener,noreferrer");
+    } else {
+      toast({
+        title: "Coming Soon",
+        description:
+          "Stripe checkout is being set up. Contact us directly to purchase this piece.",
+      });
+    }
   };
 
   if (!artwork) {
