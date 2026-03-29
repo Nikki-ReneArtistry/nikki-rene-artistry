@@ -53,7 +53,7 @@ export const artworks: Artwork[] = [
     description:
       "A richly layered mixed media collage celebrating the majesty of giraffes amidst an African landscape. Animal prints, tropical leaves, and textured borders create a vibrant tapestry of wildlife and pattern.",
     image: tallOnesImg,
-    price: 175,
+    price: 65,
     size: '11" × 14"',
     medium: "Mixed Media Collage",
     year: 2024,
