@@ -3,6 +3,7 @@ import art2 from "@/assets/art-2.jpg";
 import art3 from "@/assets/art-3.jpg";
 import art4 from "@/assets/art-4.jpg";
 import art5 from "@/assets/art-5.jpg";
+import amazeImg from "@/assets/amaze.jpg";
 
 export interface Artwork {
   id: string;
@@ -89,7 +90,7 @@ export const artworks: Artwork[] = [
     title: "Amaze",
     description:
       "A captivating piece that draws you in with its bold presence and intricate detail. 'Amaze' invites wonder and contemplation, transforming any space it inhabits.",
-    image: "https://files.stripe.com/links/MDB8YWNjdF8xVDdnNjZKdUg1WEdPZEx1fGZsX2xpdmVfUDR6Z0ZCWHFhYW85bDMzT1JpaEpFbEpG",
+    image: amazeImg,
     price: 175,
     size: '16"',
     medium: "Mixed Media",
