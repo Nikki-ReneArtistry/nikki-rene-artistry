@@ -13,7 +13,7 @@ const Collection = () => {
   const [gridSize, setGridSize] = useState<"large" | "small">("large");
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const filters = ["all", "Oil on Canvas", "Acrylic on Canvas", "Watercolor on Paper", "Mixed Media on Canvas"];
+  const filters = ["all", "Mixed Media", "Mixed Media Collage"];
 
   const filteredArtworks = selectedFilter === "all"
     ? artworks
@@ -62,7 +62,7 @@ const Collection = () => {
               headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
             }`}
           >
-            Whispers of <span className="italic text-primary">Light</span>
+            No Two <span className="italic text-primary">Alike</span>
           </h1>
           <p
             className={`font-sans text-muted-foreground max-w-2xl mx-auto transition-all duration-700 delay-200 ${
