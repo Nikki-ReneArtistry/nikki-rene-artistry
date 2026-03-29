@@ -67,7 +67,7 @@ export const artworks: Artwork[] = [
     description:
       "A striking circular canvas depicting a windswept tree silhouetted against swirling emerald and teal marbled skies. Leaves scatter in the gust, capturing nature's raw energy and resilience.",
     image: windyImg,
-    price: 175,
+    price: 85,
     size: '16"',
     medium: "Mixed Media",
     year: 2024,
