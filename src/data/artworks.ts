@@ -30,7 +30,7 @@ export const artworks: Artwork[] = [
     medium: "Mixed Media",
     year: 2024,
     available: true,
-    collection: "Whispers of Light",
+    collection: "No Two Alike",
     paymentLink: "https://buy.stripe.com/bJebJ2f7K32l0IV0bk2oE00",
   },
   {
@@ -44,7 +44,7 @@ export const artworks: Artwork[] = [
     medium: "Mixed Media",
     year: 2024,
     available: true,
-    collection: "Whispers of Light",
+    collection: "No Two Alike",
     paymentLink: "https://buy.stripe.com/cNi6oI4t646pezL2js2oE01",
   },
   {
@@ -58,7 +58,7 @@ export const artworks: Artwork[] = [
     medium: "Mixed Media Collage",
     year: 2024,
     available: true,
-    collection: "Whispers of Light",
+    collection: "No Two Alike",
     paymentLink: "https://buy.stripe.com/00w7sM2kYgTb2R33nw2oE02",
   },
   {
@@ -72,7 +72,7 @@ export const artworks: Artwork[] = [
     medium: "Mixed Media",
     year: 2024,
     available: true,
-    collection: "Whispers of Light",
+    collection: "No Two Alike",
     paymentLink: "https://buy.stripe.com/bJebJ20cQdGZajv8HQ2oE03",
   },
   {
@@ -86,7 +86,7 @@ export const artworks: Artwork[] = [
     medium: "Mixed Media",
     year: 2024,
     available: true,
-    collection: "Whispers of Light",
+    collection: "No Two Alike",
     paymentLink: "https://buy.stripe.com/cNi7sMgbO6ex77j6zI2oE04",
   },
 ];

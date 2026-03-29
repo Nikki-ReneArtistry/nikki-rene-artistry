@@ -13,7 +13,7 @@ const Collection = () => {
   const [gridSize, setGridSize] = useState<"large" | "small">("large");
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const filters = ["all", "Oil on Canvas", "Acrylic on Canvas", "Watercolor on Paper", "Mixed Media on Canvas"];
+  const filters = ["all", "Mixed Media", "Mixed Media Collage"];
 
   const filteredArtworks = selectedFilter === "all"
     ? artworks
