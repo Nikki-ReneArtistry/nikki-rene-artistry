@@ -1,40 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import art1 from "@/assets/art-1.jpg";
-import art2 from "@/assets/art-2.jpg";
-import art3 from "@/assets/art-3.jpg";
+import { artworks } from "@/data/artworks";
 
-interface ArtPiece {
-  id: string;
-  title: string;
-  image: string;
-  price: number;
-  size: string;
-}
-
-const featuredPieces: ArtPiece[] = [
-  {
-    id: "ethereal-flow",
-    title: "Ethereal Flow",
-    image: art1,
-    price: 2400,
-    size: '24" × 24"',
-  },
-  {
-    id: "midnight-reverie",
-    title: "Midnight Reverie",
-    image: art2,
-    price: 3200,
-    size: '36" × 36"',
-  },
-  {
-    id: "lavender-dreams",
-    title: "Lavender Dreams",
-    image: art3,
-    price: 1800,
-    size: '20" × 20"',
-  },
-];
+// Show first 3 real artworks as featured
+const featuredPieces = artworks.slice(0, 3);
 
 const FeaturedArt = () => {
   const [visibleItems, setVisibleItems] = useState<Set<number>>(new Set());
@@ -64,7 +33,7 @@ const FeaturedArt = () => {
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <p className="font-sans text-xs uppercase tracking-[0.3em] text-primary mb-4">
-            Curated Selection
+            No Two Alike
           </p>
           <h2 className="font-serif text-4xl md:text-5xl">
             Featured <span className="italic">Pieces</span>
