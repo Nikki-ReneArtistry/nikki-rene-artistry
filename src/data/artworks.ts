@@ -4,6 +4,7 @@ import art3 from "@/assets/art-3.jpg";
 import art4 from "@/assets/art-4.jpg";
 import art5 from "@/assets/art-5.jpg";
 import amazeImg from "@/assets/amaze.jpg";
+import unprecedentedImg from "@/assets/unprecedented.jpg";
 
 export interface Artwork {
   id: string;
