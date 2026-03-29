@@ -91,6 +91,27 @@ const HeroSection = () => {
                 About the Artist
               </Link>
             </div>
+
+            {/* Social Icons */}
+            <div
+              className={`flex gap-5 justify-center lg:justify-start mt-6 transition-all duration-1000 delay-1000 ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-8"
+              }`}
+            >
+              <a href="https://www.facebook.com/nikki.rene.artistry.2025/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/70 transition-colors">
+                <Facebook size={22} />
+              </a>
+              <a href="https://www.instagram.com/nikkireneartistry/" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/70 transition-colors">
+                <Instagram size={22} />
+              </a>
+              <a href="https://www.tiktok.com/@nikkireneartistry" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/70 transition-colors">
+                <svg viewBox="0 0 24 24" fill="currentColor" className="w-[22px] h-[22px]">
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.7a8.16 8.16 0 0 0 4.76 1.52v-3.4a4.85 4.85 0 0 1-1-.13z"/>
+                </svg>
+              </a>
+            </div>
           </div>
 
           {/* Right side - Logo at 75% opacity, increased size */}
