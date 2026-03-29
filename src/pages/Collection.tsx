@@ -264,13 +264,25 @@ const ProductCard = ({ artwork, index, visible, compact }: ProductCardProps) => 
             <Eye size={15} />
             View
           </Link>
-          <Link
-            to={`/collection/${artwork.id}`}
-            className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-full font-sans text-sm font-medium tracking-wide hover:bg-primary/90 transition-colors duration-200"
-          >
-            <ShoppingBag size={15} />
-            Buy
-          </Link>
+          {artwork.paymentLink ? (
+            <a
+              href={artwork.paymentLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-full font-sans text-sm font-medium tracking-wide hover:bg-primary/90 transition-colors duration-200"
+            >
+              <ShoppingBag size={15} />
+              Buy
+            </a>
+          ) : (
+            <Link
+              to={`/collection/${artwork.id}`}
+              className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-5 py-2.5 rounded-full font-sans text-sm font-medium tracking-wide hover:bg-primary/90 transition-colors duration-200"
+            >
+              <ShoppingBag size={15} />
+              Buy
+            </Link>
+          )}
         </div>
       </div>
 
