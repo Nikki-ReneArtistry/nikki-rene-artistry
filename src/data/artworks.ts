@@ -53,7 +53,7 @@ export const artworks: Artwork[] = [
     description:
       "A richly layered mixed media collage celebrating the majesty of giraffes amidst an African landscape. Animal prints, tropical leaves, and textured borders create a vibrant tapestry of wildlife and pattern.",
     image: tallOnesImg,
-    price: 175,
+    price: 65,
     size: '11" × 14"',
     medium: "Mixed Media Collage",
     year: 2024,
@@ -67,7 +67,7 @@ export const artworks: Artwork[] = [
     description:
       "A striking circular canvas depicting a windswept tree silhouetted against swirling emerald and teal marbled skies. Leaves scatter in the gust, capturing nature's raw energy and resilience.",
     image: windyImg,
-    price: 175,
+    price: 85,
     size: '16"',
     medium: "Mixed Media",
     year: 2024,
@@ -81,7 +81,7 @@ export const artworks: Artwork[] = [
     description:
       "An enchanting circular piece where flowing tendrils of gold and copper dance across a deep teal backdrop. The organic, crackled textures and metallic accents create a mesmerizing interplay of warmth and depth.",
     image: goldenWhispersImg,
-    price: 175,
+    price: 125,
     size: '16"',
     medium: "Mixed Media",
     year: 2024,
