@@ -131,6 +131,34 @@ export const artworks: Artwork[] = [
     collection: "Whispers of Light",
     paymentLink: "https://buy.stripe.com/00w7sM2kYgTb2R33nw2oE02",
   },
+  {
+    id: "windy",
+    title: "Windy",
+    description:
+      "A striking circular canvas depicting a windswept tree silhouetted against swirling emerald and teal marbled skies. Leaves scatter in the gust, capturing nature's raw energy and resilience.",
+    image: windyImg,
+    price: 175,
+    size: '16"',
+    medium: "Mixed Media",
+    year: 2024,
+    available: true,
+    collection: "Whispers of Light",
+    paymentLink: "https://buy.stripe.com/bJebJ20cQdGZajv8HQ2oE03",
+  },
+  {
+    id: "golden-whispers",
+    title: "Golden Whispers",
+    description:
+      "An enchanting circular piece where flowing tendrils of gold and copper dance across a deep teal backdrop. The organic, crackled textures and metallic accents create a mesmerizing interplay of warmth and depth.",
+    image: goldenWhispersImg,
+    price: 175,
+    size: '16"',
+    medium: "Mixed Media",
+    year: 2024,
+    available: true,
+    collection: "Whispers of Light",
+    paymentLink: "https://buy.stripe.com/cNi7sMgbO6ex77j6zI2oE04",
+  },
 ];
 
 export const getArtworkById = (id: string): Artwork | undefined => {
