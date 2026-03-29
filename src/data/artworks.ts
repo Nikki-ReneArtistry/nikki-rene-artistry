@@ -15,6 +15,7 @@ export interface Artwork {
   year: number;
   available: boolean;
   collection: string;
+  paymentLink?: string;
 }
 
 export const artworks: Artwork[] = [
