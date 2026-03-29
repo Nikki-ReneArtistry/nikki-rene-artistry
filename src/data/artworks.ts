@@ -6,6 +6,8 @@ import art5 from "@/assets/art-5.jpg";
 import amazeImg from "@/assets/amaze.jpg";
 import unprecedentedImg from "@/assets/unprecedented.jpg";
 import tallOnesImg from "@/assets/the-tall-ones.jpg";
+import windyImg from "@/assets/windy.jpg";
+import goldenWhispersImg from "@/assets/golden-whispers.jpg";
 
 export interface Artwork {
   id: string;
