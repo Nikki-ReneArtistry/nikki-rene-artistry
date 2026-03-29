@@ -100,6 +100,20 @@ export const artworks: Artwork[] = [
     collection: "Whispers of Light",
     paymentLink: "https://buy.stripe.com/bJebJ2f7K32l0IV0bk2oE00",
   },
+  {
+    id: "unprecedented",
+    title: "Unprecedented",
+    description:
+      "A stunning circular mixed media piece featuring a mosaic of earth tones — forest green, gold, crimson, navy, and warm browns — divided by raised gold borders and adorned with textured resin orbs. A rich, tactile work that celebrates color and form.",
+    image: unprecedentedImg,
+    price: 175,
+    size: '16"',
+    medium: "Mixed Media",
+    year: 2024,
+    available: true,
+    collection: "Whispers of Light",
+    paymentLink: "https://buy.stripe.com/cNi6oI4t646pezL2js2oE01",
+  },
 ];
 
 export const getArtworkById = (id: string): Artwork | undefined => {
