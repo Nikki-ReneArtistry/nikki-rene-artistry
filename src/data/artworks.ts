@@ -82,7 +82,7 @@ export const artworks: Artwork[] = [
       "An enchanting circular piece where flowing tendrils of gold and copper dance across a deep teal backdrop. The organic, crackled textures and metallic accents create a mesmerizing interplay of warmth and depth.",
     image: goldenWhispersImg,
     price: 125,
-    size: '16"',
+    size: '10"',
     medium: "Mixed Media",
     year: 2024,
     available: true,
