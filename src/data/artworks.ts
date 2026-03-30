@@ -8,6 +8,16 @@ import mysticalBurstImg from "@/assets/mystical-burst.jpg";
 import electromagneticImg from "@/assets/electromagnetic.jpg";
 import greenForestImg from "@/assets/green-forest.jpg";
 import rippleEffectImg from "@/assets/ripple-effect.jpg";
+import ancientEchoesImg from "@/assets/ancient-echoes.jpg";
+import mysteryInMotionImg from "@/assets/mystery-in-motion.jpg";
+import whisperingStonesImg from "@/assets/whispering-stones.jpg";
+import orbitOfDiversityImg from "@/assets/orbit-of-diversity.jpg";
+import etherealFusionImg from "@/assets/ethereal-fusion.jpg";
+import crackedSphereImg from "@/assets/cracked-sphere.jpg";
+import mosaicDreamImg from "@/assets/mosaic-dream.jpg";
+import veiledExpressionsImg from "@/assets/veiled-expressions.jpg";
+import shegoImg from "@/assets/shego.jpg";
+import beyondTheMountainsImg from "@/assets/beyond-the-mountains.jpg";
 
 export interface Artwork {
   id: string;
