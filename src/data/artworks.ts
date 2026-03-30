@@ -3,6 +3,11 @@ import unprecedentedImg from "@/assets/unprecedented.jpg";
 import tallOnesImg from "@/assets/the-tall-ones.jpg";
 import windyImg from "@/assets/windy.jpg";
 import goldenWhispersImg from "@/assets/golden-whispers.jpg";
+import aquaForestImg from "@/assets/aqua-forest.jpg";
+import mysticalBurstImg from "@/assets/mystical-burst.jpg";
+import electromagneticImg from "@/assets/electromagnetic.jpg";
+import greenForestImg from "@/assets/green-forest.jpg";
+import rippleEffectImg from "@/assets/ripple-effect.jpg";
 
 export interface Artwork {
   id: string;
