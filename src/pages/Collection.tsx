@@ -1,28 +1,34 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { Eye, ShoppingBag, Sparkles, ImageIcon } from "lucide-react";
+import { Eye, ShoppingBag, Sparkles, ImageIcon, Layers, Circle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { artworks, Artwork } from "@/data/artworks";
 import { Button } from "@/components/ui/button";
 
-const sizeCategories = [
-  { label: '16" Collection', size: '16"', description: "Statement pieces commanding attention" },
-  { label: '12" Collection', size: '12"', description: "Beautifully balanced mid-size works" },
-  { label: '10" Collection', size: '10"', description: "Perfectly intimate circular canvases" },
-  { label: '8" Collection', size: '8"', description: "Petite treasures full of character" },
-  { label: "Unique Editions", size: "", description: "One-of-a-kind pieces beyond dimension" },
+const sizeFilters = [
+  { label: "All Pieces", value: "all", icon: Layers },
+  { label: '16" Collection', value: '16"', icon: Circle },
+  { label: '12" Collection', value: '12"', icon: Circle },
+  { label: '10" Collection', value: '10"', icon: Circle },
+  { label: '8" Collection', value: '8"', icon: Circle },
+  { label: "Unique Editions", value: "", icon: Circle },
 ];
 
 const Collection = () => {
   const [visibleItems, setVisibleItems] = useState<Set<string>>(new Set());
   const [headerVisible, setHeaderVisible] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [activeFilter, setActiveFilter] = useState("all");
   const containerRef = useRef<HTMLDivElement>(null);
 
-  const availableCategories = sizeCategories.filter((cat) =>
-    artworks.some((a) => a.size === cat.size)
+  const availableFilters = sizeFilters.filter(
+    (f) => f.value === "all" || artworks.some((a) => a.size === f.value)
   );
+
+  const filteredArtworks =
+    activeFilter === "all"
+      ? artworks
+      : artworks.filter((a) => a.size === activeFilter);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -46,12 +52,11 @@ const Collection = () => {
     items?.forEach((item) => observer.observe(item));
 
     return () => observer.disconnect();
-  }, []);
+  }, [filteredArtworks]);
 
-  const scrollToCategory = (size: string) => {
-    setActiveCategory(size);
-    const el = document.getElementById(`category-${size || "unique"}`);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+  const handleFilterChange = (value: string) => {
+    setActiveFilter(value);
+    setVisibleItems(new Set());
   };
 
   return (
@@ -59,7 +64,7 @@ const Collection = () => {
       <Header />
 
       {/* Hero */}
-      <section className="pt-32 pb-16 relative overflow-hidden">
+      <section className="pt-32 pb-12 relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-accent/30 via-transparent to-transparent pointer-events-none" />
         <div className="container mx-auto px-6 text-center relative z-10">
           <p
@@ -82,71 +87,147 @@ const Collection = () => {
             }`}
           >
             Each piece in this collection is a unique exploration of color,
-            form, and emotion. Handcrafted with intention, these works invite
-            you to pause, reflect, and connect.
+            form, and emotion. Handcrafted with intention.
           </p>
-
-          {/* Size category pills */}
-          <div
-            className={`flex flex-wrap items-center justify-center gap-3 mt-10 transition-all duration-700 delay-300 ${
-              headerVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
-            }`}
-          >
-            {availableCategories.map((cat) => (
-              <button
-                key={cat.size}
-                onClick={() => scrollToCategory(cat.size)}
-                className={`px-5 py-2.5 rounded-full text-sm font-sans tracking-wide transition-all duration-300 border ${
-                  activeCategory === cat.size
-                    ? "bg-primary text-primary-foreground border-primary shadow-lg shadow-primary/25"
-                    : "bg-background text-muted-foreground border-border hover:border-primary/50 hover:text-primary"
-                }`}
-              >
-                {cat.label}
-              </button>
-            ))}
-          </div>
         </div>
       </section>
 
-      {/* Categorized Gallery */}
-      <section className="pb-20" ref={containerRef}>
+      {/* Main content: sidebar + gallery */}
+      <section className="pb-20">
         <div className="container mx-auto px-6">
-          {availableCategories.map((cat, catIndex) => {
-            const categoryArtworks = artworks.filter((a) => a.size === cat.size);
-            return (
-              <div
-                key={cat.size}
-                id={`category-${cat.size || "unique"}`}
-                className={`${catIndex > 0 ? "mt-20" : ""} scroll-mt-28`}
-              >
-                {/* Category Header */}
-                <div className="flex items-end gap-4 mb-8 border-b border-border pb-4">
-                  <div>
-                    <h2 className="font-serif text-3xl md:text-4xl">
-                      {cat.label}
-                    </h2>
-                    <p className="font-sans text-sm text-muted-foreground mt-1">
-                      {cat.description} · {categoryArtworks.length} piece{categoryArtworks.length !== 1 ? "s" : ""}
-                    </p>
-                  </div>
-                </div>
+          <div className="flex gap-8">
+            {/* Sidebar */}
+            <aside
+              className={`hidden md:block w-56 shrink-0 transition-all duration-700 delay-300 ${
+                headerVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
+              }`}
+            >
+              <div className="sticky top-28">
+                <p className="font-sans text-[11px] uppercase tracking-[0.2em] text-muted-foreground mb-4">
+                  Browse by Size
+                </p>
+                <nav className="flex flex-col gap-1">
+                  {availableFilters.map((filter) => {
+                    const isActive = activeFilter === filter.value;
+                    const count =
+                      filter.value === "all"
+                        ? artworks.length
+                        : artworks.filter((a) => a.size === filter.value).length;
 
-                {/* Artworks Grid */}
-                <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                  {categoryArtworks.map((artwork, index) => (
-                    <ProductCard
-                      key={artwork.id}
-                      artwork={artwork}
-                      index={index}
-                      visible={visibleItems.has(artwork.id)}
-                      delay={catIndex * 100 + index * 80}
-                    />
-                  ))}
-                </div>
+                    return (
+                      <button
+                        key={filter.value}
+                        onClick={() => handleFilterChange(filter.value)}
+                        className={`flex items-center justify-between px-4 py-2.5 rounded-lg text-sm font-sans transition-all duration-300 text-left group ${
+                          isActive
+                            ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20"
+                            : "text-muted-foreground hover:bg-accent hover:text-accent-foreground"
+                        }`}
+                      >
+                        <span className="flex items-center gap-2.5">
+                          <filter.icon
+                            size={filter.value === "all" ? 16 : 12}
+                            className={isActive ? "text-primary-foreground" : "text-muted-foreground/50 group-hover:text-accent-foreground"}
+                          />
+                          {filter.label}
+                        </span>
+                        <span
+                          className={`text-xs tabular-nums ${
+                            isActive ? "text-primary-foreground/70" : "text-muted-foreground/50"
+                          }`}
+                        >
+                          {count}
+                        </span>
+                      </button>
+                    );
+                  })}
+                </nav>
               </div>
-            );
-          })}
+            </aside>
+
+            {/* Mobile filter bar */}
+            <div className="md:hidden w-full mb-6">
+              <div className="flex gap-2 overflow-x-auto pb-2 -mx-1 px-1 scrollbar-hide">
+                {availableFilters.map((filter) => {
+                  const isActive = activeFilter === filter.value;
+                  return (
+                    <button
+                      key={filter.value}
+                      onClick={() => handleFilterChange(filter.value)}
+                      className={`shrink-0 px-4 py-2 rounded-full text-xs font-sans tracking-wide transition-all duration-300 border ${
+                        isActive
+                          ? "bg-primary text-primary-foreground border-primary"
+                          : "bg-background text-muted-foreground border-border hover:border-primary/50"
+                      }`}
+                    >
+                      {filter.label}
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
+          </div>
+
+          {/* Gallery area — sits next to the sidebar */}
+          <div className="flex gap-8">
+            {/* Spacer for sidebar width on desktop */}
+            <div className="hidden md:block w-56 shrink-0" />
+
+            <div className="flex-1 min-w-0" ref={containerRef}>
+              {/* Results header */}
+              <div className="flex items-center justify-between mb-6">
+                <p className="font-sans text-sm text-muted-foreground">
+                  Showing{" "}
+                  <span className="font-medium text-foreground">
+                    {filteredArtworks.length}
+                  </span>{" "}
+                  piece{filteredArtworks.length !== 1 ? "s" : ""}
+                  {activeFilter !== "all" && (
+                    <span>
+                      {" "}in{" "}
+                      <span className="text-primary font-medium">
+                        {availableFilters.find((f) => f.value === activeFilter)?.label}
+                      </span>
+                    </span>
+                  )}
+                </p>
+                {activeFilter !== "all" && (
+                  <button
+                    onClick={() => handleFilterChange("all")}
+                    className="text-xs font-sans text-primary hover:underline"
+                  >
+                    View all
+                  </button>
+                )}
+              </div>
+
+              {/* Grid */}
+              <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+                {filteredArtworks.map((artwork, index) => (
+                  <ProductCard
+                    key={artwork.id}
+                    artwork={artwork}
+                    visible={visibleItems.has(artwork.id)}
+                    delay={index * 80}
+                  />
+                ))}
+              </div>
+
+              {filteredArtworks.length === 0 && (
+                <div className="text-center py-20">
+                  <p className="font-serif text-2xl text-muted-foreground">
+                    No pieces found
+                  </p>
+                  <button
+                    onClick={() => handleFilterChange("all")}
+                    className="mt-4 text-primary font-sans text-sm hover:underline"
+                  >
+                    View all pieces
+                  </button>
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </section>
 
@@ -191,16 +272,15 @@ const Collection = () => {
   );
 };
 
-/* ─── Product Card Component ─── */
+/* ─── Product Card ─── */
 
 interface ProductCardProps {
   artwork: Artwork;
-  index: number;
   visible: boolean;
   delay: number;
 }
 
-const ProductCard = ({ artwork, index, visible, delay }: ProductCardProps) => {
+const ProductCard = ({ artwork, visible, delay }: ProductCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
@@ -218,7 +298,6 @@ const ProductCard = ({ artwork, index, visible, delay }: ProductCardProps) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Image Container */}
       <div className="relative aspect-square overflow-hidden bg-secondary">
         <img
           src={artwork.image}
@@ -226,7 +305,6 @@ const ProductCard = ({ artwork, index, visible, delay }: ProductCardProps) => {
           className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
         />
 
-        {/* Sold Overlay */}
         {!artwork.available && (
           <div className="absolute inset-0 bg-foreground/60 flex items-center justify-center">
             <span className="font-serif text-lg italic text-background tracking-wider">
@@ -235,7 +313,6 @@ const ProductCard = ({ artwork, index, visible, delay }: ProductCardProps) => {
           </div>
         )}
 
-        {/* Hover Overlay with Buttons */}
         <div
           className={`absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/20 to-transparent flex items-end justify-center pb-6 gap-3 transition-opacity duration-400 ${
             isHovered && artwork.available ? "opacity-100" : "opacity-0"
@@ -270,22 +347,26 @@ const ProductCard = ({ artwork, index, visible, delay }: ProductCardProps) => {
         </div>
       </div>
 
-      {/* Product Info */}
       <div className="p-5">
         <Link to={`/collection/${artwork.id}`}>
           <h3 className="font-serif text-lg mb-1.5 group-hover:text-primary transition-colors duration-300">
             {artwork.title}
           </h3>
         </Link>
-
         <p className="font-sans text-xs text-muted-foreground mb-3 line-clamp-2">
           {artwork.description}
         </p>
-
         <div className="flex items-center justify-between">
-          <span className="font-sans text-[11px] text-muted-foreground uppercase tracking-wider">
-            {artwork.medium}
-          </span>
+          <div className="flex flex-col">
+            <span className="font-sans text-[11px] text-muted-foreground uppercase tracking-wider">
+              {artwork.medium}
+            </span>
+            {artwork.size && (
+              <span className="font-sans text-[11px] text-muted-foreground">
+                {artwork.size}
+              </span>
+            )}
+          </div>
           <span className="font-sans font-semibold text-lg text-primary">
             ${artwork.price.toLocaleString()}
           </span>
