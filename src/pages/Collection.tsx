@@ -95,6 +95,28 @@ const Collection = () => {
       {/* Main content: sidebar + gallery */}
       <section className="pb-20">
         <div className="container mx-auto px-6">
+          {/* Mobile filter bar */}
+          <div className="md:hidden mb-6">
+            <div className="flex gap-2 overflow-x-auto pb-2 -mx-1 px-1 scrollbar-hide">
+              {availableFilters.map((filter) => {
+                const isActive = activeFilter === filter.value;
+                return (
+                  <button
+                    key={filter.value}
+                    onClick={() => handleFilterChange(filter.value)}
+                    className={`shrink-0 px-4 py-2 rounded-full text-xs font-sans tracking-wide transition-all duration-300 border ${
+                      isActive
+                        ? "bg-primary text-primary-foreground border-primary"
+                        : "bg-background text-muted-foreground border-border hover:border-primary/50"
+                    }`}
+                  >
+                    {filter.label}
+                  </button>
+                );
+              })}
+            </div>
+          </div>
+
           <div className="flex gap-8">
             {/* Sidebar */}
             <aside
@@ -145,34 +167,7 @@ const Collection = () => {
               </div>
             </aside>
 
-            {/* Mobile filter bar */}
-            <div className="md:hidden w-full mb-6">
-              <div className="flex gap-2 overflow-x-auto pb-2 -mx-1 px-1 scrollbar-hide">
-                {availableFilters.map((filter) => {
-                  const isActive = activeFilter === filter.value;
-                  return (
-                    <button
-                      key={filter.value}
-                      onClick={() => handleFilterChange(filter.value)}
-                      className={`shrink-0 px-4 py-2 rounded-full text-xs font-sans tracking-wide transition-all duration-300 border ${
-                        isActive
-                          ? "bg-primary text-primary-foreground border-primary"
-                          : "bg-background text-muted-foreground border-border hover:border-primary/50"
-                      }`}
-                    >
-                      {filter.label}
-                    </button>
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-
-          {/* Gallery area — sits next to the sidebar */}
-          <div className="flex gap-8">
-            {/* Spacer for sidebar width on desktop */}
-            <div className="hidden md:block w-56 shrink-0" />
-
+            {/* Gallery */}
             <div className="flex-1 min-w-0" ref={containerRef}>
               {/* Results header */}
               <div className="flex items-center justify-between mb-6">
