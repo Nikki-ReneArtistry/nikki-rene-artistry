@@ -6,14 +6,23 @@ import Footer from "@/components/Footer";
 import { artworks, Artwork } from "@/data/artworks";
 import { Button } from "@/components/ui/button";
 
+const ROUND_SIZES = ['16"', '14"', '12"', '10"', '8"'];
+
 const sizeFilters = [
   { label: "All Pieces", value: "all", icon: Layers },
-  { label: '16" Collection', value: '16"', icon: Circle },
-  { label: '12" Collection', value: '12"', icon: Circle },
-  { label: '10" Collection', value: '10"', icon: Circle },
-  { label: '8" Collection', value: '8"', icon: Circle },
-  { label: "Unique Editions", value: "", icon: Circle },
+  { label: '16" Round', value: '16"', icon: Circle },
+  { label: '14" Round', value: '14"', icon: Circle },
+  { label: '12" Round', value: '12"', icon: Circle },
+  { label: '10" Round', value: '10"', icon: Circle },
+  { label: '8" Round', value: '8"', icon: Circle },
+  { label: "Other Sizes", value: "other", icon: Circle },
 ];
+
+const matchesFilter = (size: string, filter: string) => {
+  if (filter === "all") return true;
+  if (filter === "other") return !ROUND_SIZES.includes(size);
+  return size === filter;
+};
 
 const Collection = () => {
   const [visibleItems, setVisibleItems] = useState<Set<string>>(new Set());
@@ -22,13 +31,14 @@ const Collection = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   const availableFilters = sizeFilters.filter(
-    (f) => f.value === "all" || artworks.some((a) => a.size === f.value)
+    (f) =>
+      f.value === "all" ||
+      artworks.some((a) => matchesFilter(a.size, f.value))
   );
 
-  const filteredArtworks =
-    activeFilter === "all"
-      ? artworks
-      : artworks.filter((a) => a.size === activeFilter);
+  const filteredArtworks = artworks.filter((a) =>
+    matchesFilter(a.size, activeFilter)
+  );
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -134,7 +144,7 @@ const Collection = () => {
                     const count =
                       filter.value === "all"
                         ? artworks.length
-                        : artworks.filter((a) => a.size === filter.value).length;
+                        : artworks.filter((a) => matchesFilter(a.size, filter.value)).length;
 
                     return (
                       <button
