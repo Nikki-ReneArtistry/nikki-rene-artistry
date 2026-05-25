@@ -144,7 +144,7 @@ const Collection = () => {
                     const count =
                       filter.value === "all"
                         ? artworks.length
-                        : artworks.filter((a) => a.size === filter.value).length;
+                        : artworks.filter((a) => matchesFilter(a.size, filter.value)).length;
 
                     return (
                       <button
