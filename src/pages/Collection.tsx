@@ -307,7 +307,7 @@ const ProductCard = ({ artwork, visible, delay }: ProductCardProps) => {
         <img
           src={artwork.image}
           alt={artwork.title}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          className="absolute inset-0 w-full h-full object-contain p-4 transition-transform duration-700 group-hover:scale-105"
         />
 
         {!artwork.available && (
