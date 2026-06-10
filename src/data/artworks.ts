@@ -35,6 +35,16 @@ import ebbAndFlowImg from "@/assets/ebb-and-flow.jpg.asset.json";
 import braveSilhouettesImg from "@/assets/brave-silhouettes.jpg.asset.json";
 import gildedHorizonsImg from "@/assets/gilded-horizons.jpg.asset.json";
 import awakeningTheFlamesImg from "@/assets/awakening-the-flames.jpg.asset.json";
+import crimsonFlowImg from "@/assets/crimson-flow.jpg.asset.json";
+import divinityImg from "@/assets/divinity.jpg.asset.json";
+import geoffryImg from "@/assets/geoffry.jpg.asset.json";
+import eleganceMeetsBeautyImg from "@/assets/elegance-meets-beauty.jpg.asset.json";
+import clockworkReverieImg from "@/assets/clockwork-reverie.jpg.asset.json";
+import agelessBeautyImg from "@/assets/ageless-beauty.jpg.asset.json";
+import blessedAwakeningImg from "@/assets/blessed-awakening.jpg.asset.json";
+import flutterImg from "@/assets/flutter.jpg.asset.json";
+import beDifferentImg from "@/assets/be-different.jpg.asset.json";
+import enigmaUnveiledImg from "@/assets/enigma-unveiled.jpg.asset.json";
 
 const placeholderImg = "/placeholder.svg";
 
