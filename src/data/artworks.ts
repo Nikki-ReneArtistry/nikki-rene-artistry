@@ -45,6 +45,14 @@ import blessedAwakeningImg from "@/assets/blessed-awakening.jpg.asset.json";
 import flutterImg from "@/assets/flutter.jpg.asset.json";
 import beDifferentImg from "@/assets/be-different.jpg.asset.json";
 import enigmaUnveiledImg from "@/assets/enigma-unveiled.jpg.asset.json";
+import featheredGraceImg from "@/assets/feathered-grace.jpg.asset.json";
+import birchMoonRisingImg from "@/assets/birch-moon-rising.jpg.asset.json";
+import copperFieldsImg from "@/assets/copper-fields.jpg.asset.json";
+import cosmicNightImg from "@/assets/cosmic-night.jpg.asset.json";
+import gildedAscensionImg from "@/assets/gilded-ascension.jpg.asset.json";
+import duskShorelineImg from "@/assets/dusk-shoreline.jpg.asset.json";
+import cranesAscendingImg from "@/assets/cranes-ascending.jpg.asset.json";
+import etchingsNocturnalImg from "@/assets/etchings-nocturnal.jpg.asset.json";
 
 const placeholderImg = "/placeholder.svg";
 
