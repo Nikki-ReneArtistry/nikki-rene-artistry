@@ -73,6 +73,15 @@ import gildedFoliageImg from "@/assets/gilded-foliage.jpg.asset.json";
 import floralReverieImg from "@/assets/floral-reverie.jpg.asset.json";
 import hakunaMatataImg from "@/assets/hakuna-matata.jpg.asset.json";
 import musesGazeImg from "@/assets/muses-gaze.jpg.asset.json";
+import meadowUploadImg from "@/assets/meadow-upload.jpg.asset.json";
+import layeredAntiquityImg from "@/assets/layered-antiquity.jpg.asset.json";
+import purpleMistressUploadImg from "@/assets/purple-mistress-upload.jpg.asset.json";
+import inBloomImg from "@/assets/in-bloom.jpg.asset.json";
+import naturesMuseUploadImg from "@/assets/natures-muse-upload.jpg.asset.json";
+import journeyUploadImg from "@/assets/journey-upload.jpg.asset.json";
+import patternedBloomsImg from "@/assets/patterned-blooms.jpg.asset.json";
+import namasteUploadImg from "@/assets/namaste-upload.jpg.asset.json";
+import lavaMoltenUploadImg from "@/assets/lava-molten-upload.jpg.asset.json";
 
 const placeholderImg = "/placeholder.svg";
 
