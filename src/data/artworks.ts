@@ -63,6 +63,16 @@ import crownedResilienceImg from "@/assets/crowned-resilience.jpg.asset.json";
 import aquaticMuseImg from "@/assets/aquatic-muse.jpg.asset.json";
 import crimsonFairyUploadImg from "@/assets/crimson-fairy-upload.jpg.asset.json";
 import heartFallenImg from "@/assets/heart-fallen.jpg.asset.json";
+import amazeUploadImg from "@/assets/amaze-upload.jpg.asset.json";
+import burstMysticalUploadImg from "@/assets/burst-mystical.jpg.asset.json";
+import echoesAncientUploadImg from "@/assets/echoes-ancient.jpg.asset.json";
+import etherealFusionUploadImg from "@/assets/ethereal-fusion-upload.jpg.asset.json";
+import beyondTheMountainsUploadImg from "@/assets/beyond-the-mountains-upload.jpg.asset.json";
+import goldenWhispersUploadImg from "@/assets/golden-whispers-upload.jpg.asset.json";
+import gildedFoliageImg from "@/assets/gilded-foliage.jpg.asset.json";
+import floralReverieImg from "@/assets/floral-reverie.jpg.asset.json";
+import hakunaMatataImg from "@/assets/hakuna-matata.jpg.asset.json";
+import musesGazeImg from "@/assets/muses-gaze.jpg.asset.json";
 
 const placeholderImg = "/placeholder.svg";
 
@@ -90,7 +100,7 @@ export const artworks: Artwork[] = [
     title: "Amaze",
     description:
       "A captivating piece that draws you in with its bold presence and intricate detail. 'Amaze' invites wonder and contemplation, transforming any space it inhabits.",
-    image: amazeImg,
+    image: amazeUploadImg.url,
     price: 175,
     size: '16"',
     medium: "Mixed Media",
@@ -132,7 +142,7 @@ export const artworks: Artwork[] = [
     title: "Golden Whispers",
     description:
       "An enchanting circular piece where flowing tendrils of gold and copper dance across a deep teal backdrop. The organic, crackled textures and metallic accents create a mesmerizing interplay of warmth and depth.",
-    image: goldenWhispersImg,
+    image: goldenWhispersUploadImg.url,
     price: 125,
     size: '10"',
     medium: "Mixed Media",
@@ -160,7 +170,7 @@ export const artworks: Artwork[] = [
     title: "Mystical Burst",
     description:
       "A mesmerizing circular canvas where deep purples, midnight blues, and golden hues swirl outward from a dark center. The fluid composition evokes cosmic energy and otherworldly beauty.",
-    image: mysticalBurstImg,
+    image: burstMysticalUploadImg.url,
     price: 60,
     size: '10"',
     medium: "Mixed Media",
@@ -188,7 +198,7 @@ export const artworks: Artwork[] = [
     title: "Green Forest",
     description:
       "Elegant botanical forms — bold teal leaves with gold detailing and delicate branches set against a marbled green and silver background. A celebration of forest flora.",
-    image: greenForestImg,
+    image: gildedFoliageImg.url,
     price: 55,
     size: '12"',
     medium: "Mixed Media",
@@ -216,7 +226,7 @@ export const artworks: Artwork[] = [
     title: "Ancient Echoes",
     description:
       "Earthy tones with marbled green and pink patterns, adorned with gemstones, beads, and metallic ornaments arranged in a symmetrical cross formation.",
-    image: ancientEchoesImg,
+    image: echoesAncientUploadImg.url,
     price: 85,
     size: '10"',
     medium: "Mixed Media",
@@ -272,7 +282,7 @@ export const artworks: Artwork[] = [
     title: "Ethereal Fusion",
     description:
       "A majestic circular canvas in deep indigo and teal with copper leaf accents. A central ornate medallion is flanked by golden circles and silver filigree.",
-    image: etherealFusionImg,
+    image: etherealFusionUploadImg.url,
     price: 75,
     size: '10"',
     medium: "Mixed Media",
@@ -342,7 +352,7 @@ export const artworks: Artwork[] = [
     title: "Beyond the Mountains",
     description:
       "Jagged mountain peaks with snow-capped summits, framed by evergreen trees and soaring birds against a dramatic marbled sunset sky in warm reds and golds.",
-    image: beyondTheMountainsImg,
+    image: beyondTheMountainsUploadImg.url,
     price: 75,
     size: '10"',
     medium: "Mixed Media",
@@ -359,9 +369,9 @@ export const artworks: Artwork[] = [
   { id: "crimson-fairy", title: "Crimson Fairy", description: defaultDescription("Crimson Fairy"), image: crimsonFairyUploadImg.url, price: 125, size: '12"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/eVq14oe3G9qJfDP8HQ2oE1P" },
   { id: "blue-beauty", title: "Blue Beauty", description: defaultDescription("Blue Beauty"), image: placeholderImg, price: 300, size: '14"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/28EcN66BeeL34Zb1fo2oE1Q" },
   { id: "twin-skies", title: "Twin Skies", description: defaultDescription("Twin Skies"), image: placeholderImg, price: 300, size: '12×16"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/8x29AU2kY1Yh2R3gai2oE1R" },
-  { id: "whispering-elegance", title: "Whispering Elegance", description: defaultDescription("Whispering Elegance"), image: placeholderImg, price: 145, size: '14"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/eVq9AU2kY9qJ8bn7DM2oE1S" },
+  { id: "whispering-elegance", title: "Whispering Elegance", description: defaultDescription("Whispering Elegance"), image: floralReverieImg.url, price: 145, size: '14"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/eVq9AU2kY9qJ8bn7DM2oE1S" },
   { id: "whispers-of-savanna", title: "Whispers of Savanna", description: defaultDescription("Whispers of Savanna"), image: placeholderImg, price: 350, size: '16×20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/00w3cw1gU7iB9fr3nw2oE1T" },
-  { id: "hakuna-matata", title: "Hakuna Matata", description: defaultDescription("Hakuna Matata"), image: placeholderImg, price: 375, size: '16×20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/8x2dRa4t6gTb8bn9LU2oE1U" },
+  { id: "hakuna-matata", title: "Hakuna Matata", description: defaultDescription("Hakuna Matata"), image: hakunaMatataImg.url, price: 375, size: '16×20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/8x2dRa4t6gTb8bn9LU2oE1U" },
   { id: "into-the-wild", title: "Into the Wild", description: defaultDescription("Into the Wild"), image: placeholderImg, price: 350, size: '12×36"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/aFaaEY2kYauN8bn8HQ2oE1V" },
   { id: "aqua-wave-clock", title: "Aqua Wave Clock", description: defaultDescription("Aqua Wave Clock"), image: placeholderImg, price: 70, size: '10"', medium: "Mixed Media Clock", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/3cIcN64t6cCV4Zb1fo2oE1W" },
   { id: "pink-burst-clock", title: "Pink Burst Clock", description: defaultDescription("Pink Burst Clock"), image: placeholderImg, price: 70, size: '10"', medium: "Mixed Media Clock", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/eVqdRa6Be0Ud1MZ9LU2oE1X" },
@@ -440,7 +450,7 @@ export const artworks: Artwork[] = [
   { id: "natures-adornment", title: "Nature's Adornment", description: defaultDescription("Nature's Adornment"), image: adornmentImg.url, price: 700, size: '24×36"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/14AfZicZCfP79fr9LU2oE38" },
   { id: "mystic-orbs", title: "Mystic Orbs", description: defaultDescription("Mystic Orbs"), image: celestialBloomsImg.url, price: 400, size: '24×48"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/bJe7sM2kY0UdfDP0bk2oE39" },
   { id: "the-resting-tree", title: "The Resting Tree", description: defaultDescription("The Resting Tree"), image: placeholderImg, price: 300, size: '', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/bJeeVe5xa46p77j3nw2oE3a" },
-  { id: "muses-gaze", title: "Muses Gaze", description: defaultDescription("Muses Gaze"), image: placeholderImg, price: 375, size: '12×36"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/00wdRabVydGZ3V7cY62oE3b" },
+  { id: "muses-gaze", title: "Muses Gaze", description: defaultDescription("Muses Gaze"), image: musesGazeImg.url, price: 375, size: '12×36"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/00wdRabVydGZ3V7cY62oE3b" },
   { id: "natures-enchanted-playground", title: "Nature's Enchanted Playground", description: defaultDescription("Nature's Enchanted Playground"), image: placeholderImg, price: 1100, size: '36×36"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/9B64gA1gUbyRdvH4rA2oE3c" },
   { id: "echoes-of-the-tropics", title: "Echoes of the Tropics", description: defaultDescription("Echoes of the Tropics"), image: coastalSerenityImg.url, price: 800, size: '38×48"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/9B6dRabVyauN8bn5vE2oE3d" },
 ];
