@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/__l5e/:path*",
+      "destination": "https://ba0621ec-b1fc-44e6-8cc8-fe1091da4ff0.lovableproject.com/__l5e/:path*"
+    },
+    {
+      "source": "/((?!__l5e|assets|.*\\..*).*)",
+      "destination": "/index.html"
+    }
+  ]
+}
