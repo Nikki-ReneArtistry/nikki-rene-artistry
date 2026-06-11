@@ -483,6 +483,7 @@ export const artworks: Artwork[] = [
   { id: "muses-gaze", title: "Muses Gaze", description: defaultDescription("Muses Gaze"), image: musesGazeImg.url, price: 375, size: '12×36"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/00wdRabVydGZ3V7cY62oE3b" },
   { id: "natures-enchanted-playground", title: "Nature's Enchanted Playground", description: defaultDescription("Nature's Enchanted Playground"), image: spiraledOrchardImg.url, price: 1100, size: '36×36"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/9B64gA1gUbyRdvH4rA2oE3c" },
   { id: "echoes-of-the-tropics", title: "Echoes of the Tropics", description: defaultDescription("Echoes of the Tropics"), image: coastalSerenityImg.url, price: 800, size: '38×48"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/9B6dRabVyauN8bn5vE2oE3d" },
+  { id: "mardi-gras-tempest", title: "Mardi Gras Tempest", description: "A swirling abstract pour in regal purple, emerald green, and shimmering gold — capturing the wild, joyful chaos of Mardi Gras in motion.", image: mardiGrasTempestImg.url, price: 200, size: '18×24"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike" },
 ];
 
 export const getArtworkById = (id: string): Artwork | undefined => {
