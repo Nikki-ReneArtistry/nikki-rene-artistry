@@ -102,6 +102,16 @@ import mysteryInMotionUploadImg from "@/assets/mystery-in-motion-upload.jpg.asse
 import jungleAwakeningImg from "@/assets/jungle-awakening.jpg.asset.json";
 import spiraledOrchardImg from "@/assets/spiraled-orchard.jpg.asset.json";
 import wintersGatheringImg from "@/assets/winters-gathering.jpg.asset.json";
+import redeemedUploadImg from "@/assets/redeemed-upload.jpg.asset.json";
+import silentSnowfallUploadImg from "@/assets/silent-snowfall-upload.jpg.asset.json";
+import tidalEmbraceUploadImg from "@/assets/tidal-embrace-upload.jpg.asset.json";
+import tropicalDreamscapeUploadImg from "@/assets/tropical-dreamscape-upload.jpg.asset.json";
+import riverMysticUploadImg from "@/assets/river-mystic-upload.jpg.asset.json";
+import vintageReverieUploadImg from "@/assets/vintage-reverie-upload.jpg.asset.json";
+import serpentineDepthsUploadImg from "@/assets/serpentine-depths-upload.jpg.asset.json";
+import redRiverUploadImg from "@/assets/red-river-upload.jpg.asset.json";
+import steampunkSoulfulUploadImg from "@/assets/steampunk-soulful-upload.jpg.asset.json";
+import steampunkReverieUploadImg from "@/assets/steampunk-reverie-upload.jpg.asset.json";
 
 const placeholderImg = "/placeholder.svg";
 
