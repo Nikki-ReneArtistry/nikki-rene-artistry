@@ -92,6 +92,16 @@ import moonlitBotanicalImg from "@/assets/moonlit-botanical.jpg.asset.json";
 import lighthouseVigilImg from "@/assets/lighthouse-vigil.jpg.asset.json";
 import jeweledHorizonImg from "@/assets/jeweled-horizon.jpg.asset.json";
 import mardiGrasStormImg from "@/assets/mardi-gras-storm.jpg.asset.json";
+import mardiGrasTempestImg from "@/assets/mardi-gras-tempest.jpg.asset.json";
+import paradeThroughStormImg from "@/assets/parade-through-storm.jpg.asset.json";
+import intoTheWildUploadImg from "@/assets/into-the-wild-upload.jpg.asset.json";
+import savannaWhispersImg from "@/assets/savanna-whispers.jpg.asset.json";
+import mauveDevotionImg from "@/assets/mauve-devotion.jpg.asset.json";
+import layeredHorizonsImg from "@/assets/layered-horizons.jpg.asset.json";
+import mysteryInMotionUploadImg from "@/assets/mystery-in-motion-upload.jpg.asset.json";
+import jungleAwakeningImg from "@/assets/jungle-awakening.jpg.asset.json";
+import spiraledOrchardImg from "@/assets/spiraled-orchard.jpg.asset.json";
+import wintersGatheringImg from "@/assets/winters-gathering.jpg.asset.json";
 
 const placeholderImg = "/placeholder.svg";
 
