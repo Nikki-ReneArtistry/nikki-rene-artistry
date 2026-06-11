@@ -112,6 +112,15 @@ import serpentineDepthsUploadImg from "@/assets/serpentine-depths-upload.jpg.ass
 import redRiverUploadImg from "@/assets/red-river-upload.jpg.asset.json";
 import steampunkSoulfulUploadImg from "@/assets/steampunk-soulful-upload.jpg.asset.json";
 import steampunkReverieUploadImg from "@/assets/steampunk-reverie-upload.jpg.asset.json";
+import tearsFrozenUploadImg from "@/assets/tears-frozen-upload.jpg.asset.json";
+import sunflowerReverieUploadImg from "@/assets/sunflower-reverie-upload.jpg.asset.json";
+import tidalConvergenceUploadImg from "@/assets/tidal-convergence-upload.jpg.asset.json";
+import serenadeOfSwallowsUploadImg from "@/assets/serenade-of-swallows-upload.jpg.asset.json";
+import rippledWhispersUploadImg from "@/assets/rippled-whispers-upload.jpg.asset.json";
+import resilienceUploadImg from "@/assets/resilience-upload.jpg.asset.json";
+import sirensGardenUploadImg from "@/assets/sirens-garden-upload.jpg.asset.json";
+import tidalGardenUploadImg from "@/assets/tidal-garden-upload.jpg.asset.json";
+import silhouetteMystiqueUploadImg from "@/assets/silhouette-mystique-upload.jpg.asset.json";
 
 const placeholderImg = "/placeholder.svg";
 
