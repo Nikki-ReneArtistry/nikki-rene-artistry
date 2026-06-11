@@ -121,6 +121,16 @@ import resilienceUploadImg from "@/assets/resilience-upload.jpg.asset.json";
 import sirensGardenUploadImg from "@/assets/sirens-garden-upload.jpg.asset.json";
 import tidalGardenUploadImg from "@/assets/tidal-garden-upload.jpg.asset.json";
 import silhouetteMystiqueUploadImg from "@/assets/silhouette-mystique-upload.jpg.asset.json";
+import umbrellaStormUploadImg from "@/assets/umbrella-storm-upload.jpg.asset.json";
+import timelessStrataUploadImg from "@/assets/timeless-strata-upload.jpg.asset.json";
+import temporalBurstUploadImg from "@/assets/temporal-burst-upload.jpg.asset.json";
+import roseEternalUploadImg from "@/assets/rose-eternal-upload.jpg.asset.json";
+import tidalRhythmUploadImg from "@/assets/tidal-rhythm-upload.jpg.asset.json";
+import serengetiDuskUploadImg from "@/assets/serengeti-dusk-upload.jpg.asset.json";
+import whisperingEleganceUploadImg from "@/assets/whispering-elegance-upload.jpg.asset.json";
+import skiesTwinUploadImg from "@/assets/skies-twin-upload.jpg.asset.json";
+import shegoUploadImg from "@/assets/shego-upload.jpg.asset.json";
+import veiledExpressionsUploadImg from "@/assets/veiled-expressions-upload.jpg.asset.json";
 
 const placeholderImg = "/placeholder.svg";
 
