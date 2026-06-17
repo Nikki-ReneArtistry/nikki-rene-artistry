@@ -11,6 +11,12 @@ export default defineConfig(({ mode }) => ({
     hmr: {
       overlay: false,
     },
+    proxy: {
+      "/__l5e": {
+        target: "https://ba0621ec-b1fc-44e6-8cc8-fe1091da4ff0.lovableproject.com",
+        changeOrigin: true,
+      },
+    },
   },
   plugins: [react(), mode === "development" && componentTagger()].filter(Boolean),
   resolve: {
