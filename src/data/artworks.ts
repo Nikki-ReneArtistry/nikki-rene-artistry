@@ -74,7 +74,6 @@ import musesGazeImg from "@/assets/muses-gaze.jpg.asset.json";
 import meadowUploadImg from "@/assets/meadow-upload.jpg.asset.json";
 import layeredAntiquityImg from "@/assets/layered-antiquity.jpg.asset.json";
 import purpleMistressUploadImg from "@/assets/purple-mistress-upload.jpg.asset.json";
-import inBloomImg from "@/assets/in-bloom.jpg.asset.json";
 import naturesMuseUploadImg from "@/assets/natures-muse-upload.jpg.asset.json";
 import journeyUploadImg from "@/assets/journey-upload.jpg.asset.json";
 import patternedBloomsImg from "@/assets/patterned-blooms.jpg.asset.json";
@@ -417,7 +416,6 @@ export const artworks: Artwork[] = [
 
   // ── Pieces awaiting photography ──
   { id: "the-girls-gaze", title: "The Girl's Gaze", description: defaultDescription("The Girl's Gaze"), image: placeholderImg, price: 125, size: '16"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/fZueVeaRugTbbnz7DM2oE1M" },
-  { id: "circle-of-life", title: "Circle of Life", description: defaultDescription("Circle of Life"), image: inBloomImg.url, price: 150, size: '16"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/4gM4gAcZC32lfDPe2a2oE1N" },
   { id: "fallen-heart", title: "Fallen Heart", description: defaultDescription("Fallen Heart"), image: mauveDevotionImg.url, price: 65, size: '10"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/28E28s1gUauN63f1fo2oE1O" },
   { id: "crimson-fairy", title: "Crimson Fairy", description: defaultDescription("Crimson Fairy"), image: crimsonFairyUploadImg.url, price: 125, size: '12"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/eVq14oe3G9qJfDP8HQ2oE1P" },
   { id: "blue-beauty", title: "Blue Beauty", description: defaultDescription("Blue Beauty"), image: placeholderImg, price: 300, size: '14"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/28EcN66BeeL34Zb1fo2oE1Q" },
