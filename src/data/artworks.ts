@@ -107,6 +107,7 @@ import redRiverUploadImg from "@/assets/red-river-upload.jpg.asset.json";
 import steampunkSoulfulUploadImg from "@/assets/steampunk-soulful-upload.jpg.asset.json";
 import tearsFrozenUploadImg from "@/assets/tears-frozen-upload.jpg.asset.json";
 import sunflowerReverieUploadImg from "@/assets/sunflower-reverie-upload.jpg.asset.json";
+import art45Img from "@/assets/Art45.jpg";
 import tidalConvergenceUploadImg from "@/assets/tidal-convergence-upload.jpg.asset.json";
 import serenadeOfSwallowsUploadImg from "@/assets/serenade-of-swallows-upload.jpg.asset.json";
 import resilienceUploadImg from "@/assets/resilience-upload.jpg.asset.json";
@@ -476,7 +477,7 @@ export const artworks: Artwork[] = [
   { id: "purple-mistress", title: "Purple Mistress", description: defaultDescription("Purple Mistress"), image: purpleMistressUploadImg.url, price: 200, size: '18×24"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/aFa7sMaRubyRezL6zI2oE2Z" },
   { id: "guardians-within", title: "Guardians Within", description: defaultDescription("Guardians Within"), image: layeredAntiquityImg.url, price: 250, size: '8×40"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/9B64gA0cQcCVdvHe2a2oE31" },
   { id: "meadow", title: "Meadow", description: defaultDescription("Meadow"), image: meadowUploadImg.url, price: 300, size: '15×27"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/dRmbJ2cZC8mFajvbU22oE32" },
-  { id: "sunflower-goddess", title: "Sunflower Goddess", description: defaultDescription("Sunflower Goddess"), image: sunflowerReverieUploadImg.url, price: 500, size: '24×30"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/3cI5kE4t68mFbnzgai2oE33" },
+  { id: "sunflower-goddess", title: "Sunflower Goddess", description: defaultDescription("Sunflower Goddess"), image: art45Img, price: 500, size: '24×30"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/3cI5kE4t68mFbnzgai2oE33" },
   { id: "redeemed", title: "Redeemed", description: defaultDescription("Redeemed"), image: redeemedUploadImg.url, price: 95, size: '9×14"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/4gM3cwbVy0Ud9fr6zI2oE34" },
   { id: "full-circle", title: "Full Circle", description: defaultDescription("Full Circle"), image: gildedHorizonsImg.url, price: 300, size: '', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/4gMcN6aRu1Yh1MZ0bk2oE35" },
   { id: "bourbon-street-beats", title: "Bourbon Street Beats", description: defaultDescription("Bourbon Street Beats"), image: bourbonStreetDreamsImg.url, price: 600, size: '18×24"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/00wfZibVyauNcrDaPY2oE36" },
