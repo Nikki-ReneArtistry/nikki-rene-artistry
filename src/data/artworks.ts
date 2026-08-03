@@ -107,6 +107,7 @@ import steampunkSoulfulUploadImg from "@/assets/steampunk-soulful-upload.jpg.ass
 import tearsFrozenUploadImg from "@/assets/tears-frozen-upload.jpg.asset.json";
 import sunflowerReverieUploadImg from "@/assets/sunflower-reverie-upload.jpg.asset.json";
 import art45Img from "@/assets/Art45.jpg";
+import art40Img from "@/assets/Art40.jpg";
 import tidalConvergenceUploadImg from "@/assets/tidal-convergence-upload.jpg.asset.json";
 import serenadeOfSwallowsUploadImg from "@/assets/serenade-of-swallows-upload.jpg.asset.json";
 import resilienceUploadImg from "@/assets/resilience-upload.jpg.asset.json";
@@ -485,7 +486,7 @@ export const artworks: Artwork[] = [
   { id: "the-resting-tree", title: "The Resting Tree", description: defaultDescription("The Resting Tree"), image: moonlitBotanicalImg.url, price: 95, size: '', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/bJeeVe5xa46p77j3nw2oE3a" },
   { id: "muses-gaze", title: "Muses Gaze", description: defaultDescription("Muses Gaze"), image: musesGazeImg.url, price: 375, size: '12×36"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/00wdRabVydGZ3V7cY62oE3b" },
   { id: "natures-enchanted-playground", title: "Nature's Enchanted Playground", description: defaultDescription("Nature's Enchanted Playground"), image: spiraledOrchardImg.url, price: 800, size: '36×36"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/9B64gA1gUbyRdvH4rA2oE3c" },
-  { id: "echoes-of-the-tropics", title: "Echoes of the Tropics", description: defaultDescription("Echoes of the Tropics"), image: coastalSerenityImg.url, price: 800, size: '38×48"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/9B6dRabVyauN8bn5vE2oE3d" },
+  { id: "echoes-of-the-tropics", title: "Echoes of the Tropics", description: defaultDescription("Echoes of the Tropics"), image: art40Img.url, price: 800, size: '38×48"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/9B6dRabVyauN8bn5vE2oE3d" },
   { id: "mardi-gras-tempest", title: "Mardi Gras Tempest", description: "A swirling abstract pour in regal purple, emerald green, and shimmering gold — capturing the wild, joyful chaos of Mardi Gras in motion.", image: mardiGrasTempestImg.url, price: 200, size: '18×24"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike" },
 ];
 
