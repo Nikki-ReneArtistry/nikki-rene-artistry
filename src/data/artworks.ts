@@ -37,7 +37,6 @@ import awakeningTheFlamesImg from "@/assets/awakening-the-flames.jpg.asset.json"
 import crimsonFlowImg from "@/assets/crimson-flow.jpg.asset.json";
 import divinityImg from "@/assets/divinity.jpg.asset.json";
 import geoffryImg from "@/assets/geoffry.jpg.asset.json";
-import eleganceMeetsBeautyImg from "@/assets/elegance-meets-beauty.jpg.asset.json";
 import clockworkReverieImg from "@/assets/clockwork-reverie.jpg.asset.json";
 import agelessBeautyImg from "@/assets/ageless-beauty.jpg.asset.json";
 import blessedAwakeningImg from "@/assets/blessed-awakening.jpg.asset.json";
@@ -450,7 +449,6 @@ export const artworks: Artwork[] = [
   { id: "intricate-thoughts", title: "Intricate Thoughts", description: defaultDescription("Intricate Thoughts"), image: intricateThoughtsUploadImg.url, price: 400, size: '20×20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/cNi6oI6Be46pajvaPY2oE2u" },
   { id: "ageless-beauty", title: "Ageless Beauty", description: defaultDescription("Ageless Beauty"), image: agelessBeautyImg.url, price: 175, size: '16×20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/fZudRa7FicCV1MZ1fo2oE2v" },
   { id: "winters-silent-tears", title: "Quiet Winter", description: defaultDescription("Quiet Winter"), image: silentSnowfallUploadImg.url, price: 95, size: '18×24"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/cNi7sMcZC32l63faPY2oE2w" },
-  { id: "elegance-meets-beauty", title: "Elegance Meets Beauty", description: defaultDescription("Elegance Meets Beauty"), image: vintageReverieUploadImg.url, price: 400, size: '16×20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/cNi14o9NqgTb3V77DM2oE2y" },
   { id: "blue-lenses", title: "Blue Lenses", description: defaultDescription("Blue Lenses"), image: steampunkSoulfulUploadImg.url, price: 300, size: '16×20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/9B6cN6bVyauN8bne2a2oE2A" },
   { id: "geoffry", title: "Geoffry", description: defaultDescription("Geoffry"), image: geoffryImg.url, price: 250, size: '20×24"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/6oU28s7Fi5atajv5vE2oE2B" },
   { id: "divinity", title: "Divinity", description: defaultDescription("Divinity"), image: divinityImg.url, price: 250, size: '18×24"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/4gMdRaf7K8mF3V78HQ2oE2C" },
