@@ -378,7 +378,7 @@ export const artworks: Artwork[] = [
     description:
       "A silhouetted face emerges from swirling purple, green, and gold fluid art. The interplay of figurative and abstract creates a hauntingly beautiful portrait.",
     image: veiledExpressionsUploadImg.url,
-    price: 175,
+    price: 95,
     size: '14"',
     medium: "Mixed Media",
     year: 2024,
