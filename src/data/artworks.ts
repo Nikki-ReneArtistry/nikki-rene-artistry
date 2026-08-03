@@ -415,7 +415,6 @@ export const artworks: Artwork[] = [
   },
 
   // ── Pieces awaiting photography ──
-  { id: "the-girls-gaze", title: "The Girl's Gaze", description: defaultDescription("The Girl's Gaze"), image: placeholderImg, price: 125, size: '16"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/fZueVeaRugTbbnz7DM2oE1M" },
   { id: "fallen-heart", title: "Fallen Heart", description: defaultDescription("Fallen Heart"), image: mauveDevotionImg.url, price: 65, size: '10"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/28E28s1gUauN63f1fo2oE1O" },
   { id: "crimson-fairy", title: "Crimson Fairy", description: defaultDescription("Crimson Fairy"), image: crimsonFairyUploadImg.url, price: 125, size: '12"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/eVq14oe3G9qJfDP8HQ2oE1P" },
   { id: "twin-skies", title: "Twin Skies", description: defaultDescription("Twin Skies"), image: skiesTwinUploadImg.url, price: 300, size: '12×16"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/8x29AU2kY1Yh2R3gai2oE1R" },
