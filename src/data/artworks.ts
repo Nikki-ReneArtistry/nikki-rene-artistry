@@ -28,7 +28,6 @@ import goddessSunflowerImg from "@/assets/goddess-sunflower.jpg.asset.json";
 import fragmentsRememberedImg from "@/assets/fragments-remembered.jpg.asset.json";
 import gildedManifestationImg from "@/assets/gilded-manifestation.jpg.asset.json";
 import fracturedPrismImg from "@/assets/fractured-prism.jpg.asset.json";
-import circlesOfLifeImg from "@/assets/circles-of-life.jpg.asset.json";
 import timeFliesImg from "@/assets/time-flies.jpg.asset.json";
 import blindingVintageImg from "@/assets/blinding-vintage.jpg.asset.json";
 import ebbAndFlowImg from "@/assets/ebb-and-flow.jpg.asset.json";
@@ -43,7 +42,6 @@ import clockworkReverieImg from "@/assets/clockwork-reverie.jpg.asset.json";
 import agelessBeautyImg from "@/assets/ageless-beauty.jpg.asset.json";
 import blessedAwakeningImg from "@/assets/blessed-awakening.jpg.asset.json";
 import flutterImg from "@/assets/flutter.jpg.asset.json";
-import beDifferentImg from "@/assets/be-different.jpg.asset.json";
 import enigmaUnveiledImg from "@/assets/enigma-unveiled.jpg.asset.json";
 import featheredGraceImg from "@/assets/feathered-grace.jpg.asset.json";
 import birchMoonRisingImg from "@/assets/birch-moon-rising.jpg.asset.json";
@@ -84,7 +82,6 @@ import namasteUploadImg from "@/assets/namaste-upload.jpg.asset.json";
 import lavaMoltenUploadImg from "@/assets/lava-molten-upload.jpg.asset.json";
 import mochaUploadImg from "@/assets/mocha-upload.jpg.asset.json";
 import latteUploadImg from "@/assets/latte-upload.jpg.asset.json";
-import midnightReverieUploadImg from "@/assets/midnight-reverie-upload.jpg.asset.json";
 import intricateThoughtsUploadImg from "@/assets/intricate-thoughts-upload.jpg.asset.json";
 import plumageDreamsImg from "@/assets/plumage-dreams.jpg.asset.json";
 import moonRippleImg from "@/assets/moon-ripple.jpg.asset.json";
@@ -111,12 +108,10 @@ import vintageReverieUploadImg from "@/assets/vintage-reverie-upload.jpg.asset.j
 import serpentineDepthsUploadImg from "@/assets/serpentine-depths-upload.jpg.asset.json";
 import redRiverUploadImg from "@/assets/red-river-upload.jpg.asset.json";
 import steampunkSoulfulUploadImg from "@/assets/steampunk-soulful-upload.jpg.asset.json";
-import steampunkReverieUploadImg from "@/assets/steampunk-reverie-upload.jpg.asset.json";
 import tearsFrozenUploadImg from "@/assets/tears-frozen-upload.jpg.asset.json";
 import sunflowerReverieUploadImg from "@/assets/sunflower-reverie-upload.jpg.asset.json";
 import tidalConvergenceUploadImg from "@/assets/tidal-convergence-upload.jpg.asset.json";
 import serenadeOfSwallowsUploadImg from "@/assets/serenade-of-swallows-upload.jpg.asset.json";
-import rippledWhispersUploadImg from "@/assets/rippled-whispers-upload.jpg.asset.json";
 import resilienceUploadImg from "@/assets/resilience-upload.jpg.asset.json";
 import sirensGardenUploadImg from "@/assets/sirens-garden-upload.jpg.asset.json";
 import tidalGardenUploadImg from "@/assets/tidal-garden-upload.jpg.asset.json";
@@ -461,17 +456,14 @@ export const artworks: Artwork[] = [
   { id: "gaea-rising", title: "Gaea Rising", description: defaultDescription("Gaea Rising"), image: tidalGardenUploadImg.url, price: 375, size: '11×14"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/9B6fZif7K1Yh8bn5vE2oE2m" },
   { id: "cosmic-night", title: "Cosmic Night", description: defaultDescription("Cosmic Night"), image: cosmicNightImg.url, price: 95, size: '16×20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/7sY28s6Be9qJfDP5vE2oE2n" },
   { id: "copper-fields", title: "Copper Fields", description: defaultDescription("Copper Fields"), image: copperFieldsImg.url, price: 400, size: '20×24"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/00w5kEbVy1YhgHTe2a2oE2o" },
-  { id: "rippled-whispers", title: "Rippled Whispers", description: defaultDescription("Rippled Whispers"), image: rippledWhispersUploadImg.url, price: 300, size: '24×24"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/3cI6oI8Jm46p9fre2a2oE2p" },
   { id: "autumns-grace", title: "Autumn's Grace", description: defaultDescription("Autumn's Grace"), image: featheredGraceImg.url, price: 500, size: '18×24"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/cNi28scZC9qJ1MZf6e2oE2q" },
   { id: "enigma-unveiled", title: "Enigma Unveiled", description: defaultDescription("Enigma Unveiled"), image: enigmaUnveiledImg.url, price: 350, size: '16×12"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/5kQcN65xa9qJgHT4rA2oE2r" },
-  { id: "be-different", title: "Be Different", description: defaultDescription("Be Different"), image: beDifferentImg.url, price: 150, size: '16×20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/8x200k0cQeL3crD5vE2oE2s" },
   { id: "flutter", title: "Flutter", description: defaultDescription("Flutter"), image: flutterImg.url, price: 85, size: '12×16"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/6oUdRae3G8mFdvHaPY2oE2t" },
   { id: "intricate-thoughts", title: "Intricate Thoughts", description: defaultDescription("Intricate Thoughts"), image: intricateThoughtsUploadImg.url, price: 400, size: '20×20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/cNi6oI6Be46pajvaPY2oE2u" },
   { id: "ageless-beauty", title: "Ageless Beauty", description: defaultDescription("Ageless Beauty"), image: agelessBeautyImg.url, price: 175, size: '16×20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/fZudRa7FicCV1MZ1fo2oE2v" },
   { id: "winters-silent-tears", title: "Winter's Silent Tears", description: defaultDescription("Winter's Silent Tears"), image: silentSnowfallUploadImg.url, price: 300, size: '18×24"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/cNi7sMcZC32l63faPY2oE2w" },
   { id: "mystical-gearsmith", title: "Mystical Gearsmith", description: defaultDescription("Mystical Gearsmith"), image: clockworkReverieImg.url, price: 400, size: '16×20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/5kQbJ2e3GauN1MZ8HQ2oE2x" },
   { id: "elegance-meets-beauty", title: "Elegance Meets Beauty", description: defaultDescription("Elegance Meets Beauty"), image: vintageReverieUploadImg.url, price: 400, size: '16×20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/cNi14o9NqgTb3V77DM2oE2y" },
-  { id: "mad-hatter-mistress", title: "Mad Hatter Mistress", description: defaultDescription("Mad Hatter Mistress"), image: midnightReverieUploadImg.url, price: 400, size: '16×20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/14A8wQe3GeL3bnz4rA2oE2z" },
   { id: "blue-lenses", title: "Blue Lenses", description: defaultDescription("Blue Lenses"), image: steampunkSoulfulUploadImg.url, price: 300, size: '16×20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/9B6cN6bVyauN8bne2a2oE2A" },
   { id: "geoffry", title: "Geoffry", description: defaultDescription("Geoffry"), image: geoffryImg.url, price: 250, size: '20×24"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/6oU28s7Fi5atajv5vE2oE2B" },
   { id: "divinity", title: "Divinity", description: defaultDescription("Divinity"), image: divinityImg.url, price: 250, size: '18×24"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/4gMdRaf7K8mF3V78HQ2oE2C" },
@@ -494,11 +486,9 @@ export const artworks: Artwork[] = [
   { id: "natures-muse", title: "Nature's Muse", description: defaultDescription("Nature's Muse"), image: naturesMuseUploadImg.url, price: 300, size: '20×20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/00w6oIe3GcCVdvHf6e2oE2T" },
   { id: "time-flies", title: "Time Flies", description: defaultDescription("Time Flies"), image: timeFliesImg.url, price: 400, size: '20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/aFa7sMf7KdGZ3V73nw2oE2U" },
   { id: "frozen-whisper", title: "Frozen Whisper", description: defaultDescription("Frozen Whisper"), image: tearsFrozenUploadImg.url, price: 150, size: '16"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/4gM3cw9Nq0Udajv5vE2oE2V" },
-  { id: "circles-of-life", title: "Circles of Life", description: defaultDescription("Circles of Life"), image: circlesOfLifeImg.url, price: 200, size: '16×20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/5kQ5kEcZCauN3V74rA2oE2W" },
   { id: "shards-of-life", title: "Shards of Life", description: defaultDescription("Shards of Life"), image: fracturedPrismImg.url, price: 200, size: '16×20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/6oU4gAcZCfP7bnz6zI2oE2X" },
   { id: "gilded-manifestation", title: "Gilded Manifestation", description: defaultDescription("Gilded Manifestation"), image: gildedManifestationImg.url, price: 400, size: '21×27"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/5kQ9AUbVy9qJ8bn6zI2oE2Y" },
   { id: "purple-mistress", title: "Purple Mistress", description: defaultDescription("Purple Mistress"), image: purpleMistressUploadImg.url, price: 200, size: '18×24"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/aFa7sMaRubyRezL6zI2oE2Z" },
-  { id: "silent-reverie", title: "Silent Reverie", description: defaultDescription("Silent Reverie"), image: steampunkReverieUploadImg.url, price: 150, size: '10×40"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/eVq8wQ7FicCVcrD6zI2oE30" },
   { id: "guardians-within", title: "Guardians Within", description: defaultDescription("Guardians Within"), image: layeredAntiquityImg.url, price: 250, size: '8×40"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/9B64gA0cQcCVdvHe2a2oE31" },
   { id: "meadow", title: "Meadow", description: defaultDescription("Meadow"), image: meadowUploadImg.url, price: 300, size: '15×27"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/dRmbJ2cZC8mFajvbU22oE32" },
   { id: "sunflower-goddess", title: "Sunflower Goddess", description: defaultDescription("Sunflower Goddess"), image: sunflowerReverieUploadImg.url, price: 500, size: '24×30"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/3cI5kE4t68mFbnzgai2oE33" },
