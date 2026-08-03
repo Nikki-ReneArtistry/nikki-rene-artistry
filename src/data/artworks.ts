@@ -85,7 +85,6 @@ import intricateThoughtsUploadImg from "@/assets/intricate-thoughts-upload.jpg.a
 import plumageDreamsImg from "@/assets/plumage-dreams.jpg.asset.json";
 import moonRippleImg from "@/assets/moon-ripple.jpg.asset.json";
 import moonlitBotanicalImg from "@/assets/moonlit-botanical.jpg.asset.json";
-import lighthouseVigilImg from "@/assets/lighthouse-vigil.jpg.asset.json";
 import jeweledHorizonImg from "@/assets/jeweled-horizon.jpg.asset.json";
 import mardiGrasStormImg from "@/assets/mardi-gras-storm.jpg.asset.json";
 import mardiGrasTempestImg from "@/assets/mardi-gras-tempest.jpg.asset.json";
@@ -433,7 +432,6 @@ export const artworks: Artwork[] = [
   { id: "elara", title: "Elara", description: defaultDescription("Elara"), image: elaraUploadImg.url, price: 300, size: '10×30"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/dRm7sM5xa7iB3V70bk2oE26" },
   { id: "ocean-on-mars", title: "Ocean on Mars", description: defaultDescription("Ocean on Mars"), image: placeholderImg, price: 155, size: '14"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/8x26oI7Fi0UdcrD4rA2oE27" },
   { id: "mood-moon", title: "Mood Moon", description: defaultDescription("Mood Moon"), image: duskShorelineImg.url, price: 125, size: '14"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/8x23cw7Fi8mFezL6zI2oE28" },
-  { id: "lighthouse-vigil", title: "Lighthouse Vigil", description: defaultDescription("Lighthouse Vigil"), image: lighthouseVigilImg.url, price: 125, size: '14"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike" },
   { id: "ripple-moon", title: "Ripple Moon", description: defaultDescription("Ripple Moon"), image: moonRippleImg.url, price: 100, size: '12"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/cNi7sMe3G8mF4ZbaPY2oE29" },
   { id: "make-a-wish", title: "Make a Wish", description: defaultDescription("Make a Wish"), image: blessedAwakeningImg.url, price: 375, size: '12"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/9B6bJ21gUgTb63f7DM2oE2a" },
   { id: "peacock-feathers", title: "Peacock Feathers", description: defaultDescription("Peacock Feathers"), image: plumageDreamsImg.url, price: 125, size: '14"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/28E8wQ3p2eL3gHT3nw2oE2b" },
