@@ -159,7 +159,7 @@ export const artworks: Artwork[] = [
     description:
       "A captivating piece that draws you in with its bold presence and intricate detail. 'Amaze' invites wonder and contemplation, transforming any space it inhabits.",
     image: amazeUploadImg.url,
-    price: 175,
+    price: 95,
     size: '16"',
     medium: "Mixed Media",
     year: 2024,
@@ -173,7 +173,7 @@ export const artworks: Artwork[] = [
     description:
       "A stunning circular mixed media piece featuring a mosaic of earth tones — forest green, gold, crimson, navy, and warm browns — divided by raised gold borders and adorned with textured resin orbs.",
     image: unprecedentedImg,
-    price: 175,
+    price: 95,
     size: '16"',
     medium: "Mixed Media",
     year: 2024,
