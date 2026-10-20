@@ -52,7 +52,6 @@ import etchingsNocturnalImg from "@/assets/etchings-nocturnal.jpg.asset.json";
 import celestialBloomsImg from "@/assets/celestial-blooms.jpg.asset.json";
 import gildedBloomImg from "@/assets/gilded-bloom.jpg.asset.json";
 import elaraUploadImg from "@/assets/elara-upload.jpg.asset.json";
-import gildedDepthsImg from "@/assets/gilded-depths.jpg.asset.json";
 import gildedHoursImg from "@/assets/gilded-hours.jpg.asset.json";
 import gildedTimepieceImg from "@/assets/gilded-timepiece.jpg.asset.json";
 import crownedResilienceImg from "@/assets/crowned-resilience.jpg.asset.json";
@@ -428,7 +427,6 @@ export const artworks: Artwork[] = [
   { id: "blue-burst-clock", title: "Blue Burst Clock", description: defaultDescription("Blue Burst Clock"), image: temporalBurstUploadImg.url, price: 70, size: '10"', medium: "Mixed Media Clock", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/9B6eVe8Jm1Yh0IVaPY2oE20" },
   { id: "under-the-earth-clock", title: "Under the Earth Clock", description: defaultDescription("Under the Earth Clock"), image: timelessStrataUploadImg.url, price: 70, size: '10"', medium: "Mixed Media Clock", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/cNi28s7Fi9qJezLgai2oE21" },
   { id: "second-line", title: "Second Line", description: defaultDescription("Second Line"), image: paradeThroughStormImg.url, price: 200, size: '16×20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/cNi5kEgbO7iB0IVcY62oE22" },
-  { id: "shimmering-passage", title: "Shimmering Passage", description: defaultDescription("Shimmering Passage"), image: gildedDepthsImg.url, price: 200, size: '20×20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/4gMbJ23p25atezLaPY2oE25" },
   { id: "elara", title: "Elara", description: defaultDescription("Elara"), image: elaraUploadImg.url, price: 300, size: '10×30"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/dRm7sM5xa7iB3V70bk2oE26" },
   { id: "mood-moon", title: "Mood Moon", description: defaultDescription("Mood Moon"), image: duskShorelineImg.url, price: 125, size: '14"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/8x23cw7Fi8mFezL6zI2oE28" },
   { id: "ripple-moon", title: "Ripple Moon", description: defaultDescription("Ripple Moon"), image: moonRippleImg.url, price: 100, size: '12"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/cNi7sMe3G8mF4ZbaPY2oE29" },
