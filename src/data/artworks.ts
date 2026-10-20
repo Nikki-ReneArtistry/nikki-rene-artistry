@@ -79,7 +79,6 @@ import lavaMoltenUploadImg from "@/assets/lava-molten-upload.jpg.asset.json";
 import mochaUploadImg from "@/assets/mocha-upload.jpg.asset.json";
 import latteUploadImg from "@/assets/latte-upload.jpg.asset.json";
 import intricateThoughtsUploadImg from "@/assets/intricate-thoughts-upload.jpg.asset.json";
-import plumageDreamsImg from "@/assets/plumage-dreams.jpg.asset.json";
 import moonRippleImg from "@/assets/moon-ripple.jpg.asset.json";
 import moonlitBotanicalImg from "@/assets/moonlit-botanical.jpg.asset.json";
 import jeweledHorizonImg from "@/assets/jeweled-horizon.jpg.asset.json";
@@ -430,7 +429,6 @@ export const artworks: Artwork[] = [
   { id: "elara", title: "Elara", description: defaultDescription("Elara"), image: elaraUploadImg.url, price: 300, size: '10×30"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/dRm7sM5xa7iB3V70bk2oE26" },
   { id: "mood-moon", title: "Mood Moon", description: defaultDescription("Mood Moon"), image: duskShorelineImg.url, price: 125, size: '14"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/8x23cw7Fi8mFezL6zI2oE28" },
   { id: "ripple-moon", title: "Ripple Moon", description: defaultDescription("Ripple Moon"), image: moonRippleImg.url, price: 100, size: '12"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/cNi7sMe3G8mF4ZbaPY2oE29" },
-  { id: "peacock-feathers", title: "Peacock Feathers", description: defaultDescription("Peacock Feathers"), image: plumageDreamsImg.url, price: 125, size: '14"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/28E8wQ3p2eL3gHT3nw2oE2b" },
   { id: "nocturnal-etchings", title: "Nocturnal Etchings", description: defaultDescription("Nocturnal Etchings"), image: etchingsNocturnalImg.url, price: 95, size: '10"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/8x26oI1gUbyRezLcY62oE2e" },
   { id: "botanical-ballet", title: "Botanical Ballet", description: defaultDescription("Botanical Ballet"), image: gildedBloomImg.url, price: 150, size: '14"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/6oU00ke3GdGZ77j1fo2oE2f" },
   { id: "siren", title: "Siren", description: defaultDescription("Siren"), image: sirensGardenUploadImg.url, price: 175, size: '16"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/8x200k4t67iB0IVbU22oE2g" },
