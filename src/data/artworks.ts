@@ -42,7 +42,6 @@ import agelessBeautyImg from "@/assets/ageless-beauty.jpg.asset.json";
 import flutterImg from "@/assets/flutter.jpg.asset.json";
 import enigmaUnveiledImg from "@/assets/enigma-unveiled.jpg.asset.json";
 import featheredGraceImg from "@/assets/feathered-grace.jpg.asset.json";
-import birchMoonRisingImg from "@/assets/birch-moon-rising.jpg.asset.json";
 import copperFieldsImg from "@/assets/copper-fields.jpg.asset.json";
 import cosmicNightImg from "@/assets/cosmic-night.jpg.asset.json";
 import gildedAscensionImg from "@/assets/gilded-ascension.jpg.asset.json";
@@ -455,7 +454,6 @@ export const artworks: Artwork[] = [
   { id: "fever-flow", title: "Fever Flow", description: defaultDescription("Fever Flow"), image: serpentineDepthsUploadImg.url, price: 50, size: '5×5"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/cNi5kE9NqdGZ77j8HQ2oE2J" },
   { id: "the-glance", title: "The Glance", description: defaultDescription("The Glance"), image: silhouetteMystiqueUploadImg.url, price: 200, size: '20×20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/dRmeVegbO7iB63f8HQ2oE2K" },
   { id: "namaste", title: "Namaste", description: defaultDescription("Namaste"), image: namasteUploadImg.url, price: 123, size: '12×16"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/6oUbJ20cQ5at63fcY62oE2L" },
-  { id: "mystic-moon", title: "Mystic Moon", description: defaultDescription("Mystic Moon"), image: birchMoonRisingImg.url, price: 175, size: '16"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/aFafZi9Nq32l2R38HQ2oE2M" },
   { id: "mystic-river", title: "Mystic River", description: defaultDescription("Mystic River"), image: riverMysticUploadImg.url, price: 250, size: '12×36"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/9B6bJ2cZC6ex9fr2js2oE2N" },
   { id: "journey", title: "Journey", description: defaultDescription("Journey"), image: journeyUploadImg.url, price: 125, size: '12×24"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/9B6eVe4t6dGZgHT3nw2oE2O" },
   { id: "urban-echoes", title: "Urban Echoes", description: defaultDescription("Urban Echoes"), image: braveSilhouettesImg.url, price: 175, size: '6×40"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/aFacN63p26exbnz3nw2oE2P" },
