@@ -104,6 +104,7 @@ import tearsFrozenUploadImg from "@/assets/tears-frozen-upload.jpg.asset.json";
 import sunflowerReverieUploadImg from "@/assets/sunflower-reverie-upload.jpg.asset.json";
 import art45Img from "@/assets/Art45.jpg";
 import art40Img from "@/assets/Art40.jpg";
+import art43Img from "@/assets/Art43.jpg";
 import tidalConvergenceUploadImg from "@/assets/tidal-convergence-upload.jpg.asset.json";
 import serenadeOfSwallowsUploadImg from "@/assets/serenade-of-swallows-upload.jpg.asset.json";
 import resilienceUploadImg from "@/assets/resilience-upload.jpg.asset.json";
@@ -472,7 +473,7 @@ export const artworks: Artwork[] = [
   { id: "bourbon-street-beats", title: "Bourbon Street Beats", description: defaultDescription("Bourbon Street Beats"), image: bourbonStreetDreamsImg.url, price: 600, size: '18×24"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/00wfZibVyauNcrDaPY2oE36" },
   { id: "lunar-longings", title: "Where Wonder Looks Up", description: defaultDescription("Where Wonder Looks Up"), image: celestialHowlImg.url, price: 350, size: '20×20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/3cI5kE2kY8mF9frf6e2oE37" },
   { id: "natures-adornment", title: "When it Was Finally my Turn", description: defaultDescription("When it Was Finally my Turn"), image: adornmentImg.url, price: 500, size: '36×24"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/14AfZicZCfP79fr9LU2oE38" },
-  { id: "mystic-orbs", title: "Mystic Orbs", description: defaultDescription("Mystic Orbs"), image: celestialBloomsImg.url, price: 95, size: '24×48"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/bJe7sM2kY0UdfDP0bk2oE39" },
+  { id: "mystic-orbs", title: "Mystic Orbs", description: defaultDescription("Mystic Orbs"), image: art43Img, price: 95, size: '24×48"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/bJe7sM2kY0UdfDP0bk2oE39" },
   { id: "the-resting-tree", title: "The Resting Tree", description: defaultDescription("The Resting Tree"), image: moonlitBotanicalImg.url, price: 95, size: '', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/bJeeVe5xa46p77j3nw2oE3a" },
   { id: "muses-gaze", title: "Muses Gaze", description: defaultDescription("Muses Gaze"), image: musesGazeImg.url, price: 375, size: '12×36"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/00wdRabVydGZ3V7cY62oE3b" },
   { id: "natures-enchanted-playground", title: "Nature's Enchanted Playground", description: defaultDescription("Nature's Enchanted Playground"), image: spiraledOrchardImg.url, price: 800, size: '36×36"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/9B64gA1gUbyRdvH4rA2oE3c" },
