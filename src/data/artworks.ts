@@ -95,7 +95,6 @@ import wintersGatheringImg from "@/assets/winters-gathering.jpg.asset.json";
 import redeemedUploadImg from "@/assets/redeemed-upload.jpg.asset.json";
 import silentSnowfallUploadImg from "@/assets/silent-snowfall-upload.jpg.asset.json";
 import tidalEmbraceUploadImg from "@/assets/tidal-embrace-upload.jpg.asset.json";
-import tropicalDreamscapeUploadImg from "@/assets/tropical-dreamscape-upload.jpg.asset.json";
 import riverMysticUploadImg from "@/assets/river-mystic-upload.jpg.asset.json";
 import vintageReverieUploadImg from "@/assets/vintage-reverie-upload.jpg.asset.json";
 import serpentineDepthsUploadImg from "@/assets/serpentine-depths-upload.jpg.asset.json";
@@ -458,7 +457,6 @@ export const artworks: Artwork[] = [
   { id: "full-circle", title: "Mystic Moon", description: defaultDescription("Mystic Moon"), image: gildedHorizonsImg.url, price: 300, size: '', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/4gMcN6aRu1Yh1MZ0bk2oE35" },
   { id: "journey", title: "Journey", description: defaultDescription("Journey"), image: journeyUploadImg.url, price: 125, size: '12×24"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/9B6eVe4t6dGZgHT3nw2oE2O" },
   { id: "urban-echoes", title: "Urban Echoes", description: defaultDescription("Urban Echoes"), image: braveSilhouettesImg.url, price: 175, size: '6×40"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/aFacN63p26exbnz3nw2oE2P" },
-  { id: "tropical-dreamscape", title: "Tropical Dreamscape", description: defaultDescription("Tropical Dreamscape"), image: tropicalDreamscapeUploadImg.url, price: 150, size: '18×24"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/8x28wQ9Nq46p0IV1fo2oE2Q" },
   { id: "ebb-and-flow", title: "Ebb and Flow", description: defaultDescription("Ebb and Flow"), image: ebbAndFlowImg.url, price: 275, size: '18×24"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/6oUfZibVy32lezL9LU2oE2R" },
   { id: "tidal-embrace", title: "Tidal Embrace", description: defaultDescription("Tidal Embrace"), image: tidalEmbraceUploadImg.url, price: 225, size: '20×20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/7sY6oI4t60Ud9fr8HQ2oE2S" },
   { id: "natures-muse", title: "Nature's Muse", description: defaultDescription("Nature's Muse"), image: naturesMuseUploadImg.url, price: 300, size: '20×20"', medium: "Mixed Media", year: 2024, available: true, collection: "No Two Alike", paymentLink: "https://buy.stripe.com/00w6oIe3GcCVdvHf6e2oE2T" },
