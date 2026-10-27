@@ -19,6 +19,7 @@ const Header = () => {
     { path: "/", label: "Home" },
     { path: "/collection", label: "Collection" },
     { path: "/about", label: "About" },
+    { path: "/books-and-cards", label: "Books & Cards" },
     { path: "/contact", label: "Contact" },
   ];
 
@@ -68,7 +69,7 @@ const Header = () => {
       {/* Mobile Navigation */}
       <div
         className={`md:hidden absolute top-full left-0 right-0 bg-background/98 backdrop-blur-md transition-all duration-300 overflow-hidden ${
-          isMobileMenuOpen ? "max-h-64 py-6" : "max-h-0"
+          isMobileMenuOpen ? "max-h-96 py-6" : "max-h-0"
         }`}
       >
         <nav className="container mx-auto px-6 flex flex-col gap-4">

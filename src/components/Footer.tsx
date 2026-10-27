@@ -40,6 +40,12 @@ const Footer = () => {
                 About
               </Link>
               <Link
+                to="/books-and-cards"
+                className="font-sans text-sm text-[#F7F3EB] hover:text-[#C7A77D] transition-colors"
+              >
+                Books &amp; Cards
+              </Link>
+              <Link
                 to="/contact"
                 className="font-sans text-sm text-[#F7F3EB] hover:text-[#C7A77D] transition-colors"
               >
