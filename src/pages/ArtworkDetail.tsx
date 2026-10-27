@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, ShoppingBag, ImageIcon, Sparkles, Shield, Truck, Award } from "lucide-react";
+import { ArrowLeft, ShoppingBag, Shield, Truck, Award } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { getArtworkById, artworks } from "@/data/artworks";
@@ -82,19 +82,6 @@ const ArtworkDetail = () => {
                 />
               </div>
 
-              {/* Visualizer CTA under image */}
-              <div className="mt-4 p-4 bg-secondary rounded-lg flex items-center gap-3">
-                <div className="p-2 bg-primary/10 rounded-lg">
-                  <ImageIcon size={18} className="text-primary" />
-                </div>
-                <div className="flex-1">
-                  <p className="font-sans text-sm font-medium">See it in your space</p>
-                  <p className="font-sans text-xs text-muted-foreground">Room Visualizer — Coming Soon</p>
-                </div>
-                <span className="font-sans text-[10px] uppercase tracking-widest text-primary bg-primary/10 px-3 py-1 rounded-full">
-                  Soon
-                </span>
-              </div>
             </div>
 
             {/* Details */}
