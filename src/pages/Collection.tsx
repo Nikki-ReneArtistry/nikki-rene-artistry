@@ -1,10 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { Eye, ShoppingBag, Sparkles, ImageIcon, Layers, Circle } from "lucide-react";
+import { Eye, ShoppingBag, Layers, Circle } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { artworks, Artwork } from "@/data/artworks";
-import { Button } from "@/components/ui/button";
 
 const ROUND_SIZES = ['16"', '14"', '12"', '10"', '8"'];
 
@@ -238,42 +237,6 @@ const Collection = () => {
                 </div>
               )}
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Coming Soon: Room Visualizer */}
-      <section
-        className={`py-20 bg-secondary transition-all duration-700 delay-500 ${
-          headerVisible ? "opacity-100" : "opacity-0"
-        }`}
-      >
-        <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full mb-6">
-              <Sparkles size={14} />
-              <span className="font-sans text-xs uppercase tracking-widest">Coming Soon</span>
-            </div>
-            <h2 className="font-serif text-3xl md:text-4xl mb-4">
-              See It in Your <span className="italic text-primary">Space</span>
-            </h2>
-            <p className="font-sans text-muted-foreground mb-8 leading-relaxed">
-              Upload a photo of your room and visualize how any piece from our
-              collection will look on your wall.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button disabled className="btn-primary gap-2 opacity-60 cursor-not-allowed">
-                <ImageIcon size={16} />
-                Upload Your Room
-              </Button>
-              <Button disabled className="btn-outline gap-2 opacity-60 cursor-not-allowed">
-                <Sparkles size={16} />
-                Generate Preview
-              </Button>
-            </div>
-            <p className="font-sans text-xs text-muted-foreground mt-6">
-              This feature is currently in development. Stay tuned!
-            </p>
           </div>
         </div>
       </section>
