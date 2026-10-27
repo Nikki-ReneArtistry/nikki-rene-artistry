@@ -6,51 +6,53 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 240 10% 10%;
+    /* Warm ivory background */
+    --background: 38 40% 94%;
+    --foreground: 30 12% 16%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 240 10% 10%;
+    --card: 38 40% 94%;
+    --card-foreground: 30 12% 16%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 240 10% 10%;
+    --popover: 38 40% 94%;
+    --popover-foreground: 30 12% 16%;
 
-    --primary: 259 77% 64%;
-    --primary-foreground: 0 0% 100%;
+    /* Bronze accent */
+    --primary: 30 32% 40%;
+    --primary-foreground: 38 40% 97%;
 
-    --secondary: 259 30% 96%;
-    --secondary-foreground: 240 10% 10%;
+    --secondary: 35 20% 88%;
+    --secondary-foreground: 30 12% 16%;
 
-    --muted: 240 5% 96%;
-    --muted-foreground: 240 5% 45%;
+    --muted: 35 18% 88%;
+    --muted-foreground: 30 10% 45%;
 
-    --accent: 259 60% 94%;
-    --accent-foreground: 259 77% 50%;
+    --accent: 35 25% 85%;
+    --accent-foreground: 30 32% 35%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 240 6% 90%;
-    --input: 240 6% 90%;
-    --ring: 259 77% 64%;
+    --border: 35 15% 82%;
+    --input: 35 15% 82%;
+    --ring: 30 32% 40%;
 
     --radius: 0.5rem;
 
     /* Custom design tokens */
-    --lavender: 259 77% 64%;
-    --lavender-light: 259 60% 94%;
-    --lavender-dark: 259 77% 50%;
-    --charcoal: 240 10% 10%;
-    --ivory: 40 20% 98%;
+    --lavender: 30 32% 40%;
+    --lavender-light: 35 25% 85%;
+    --lavender-dark: 30 32% 30%;
+    --charcoal: 30 12% 16%;
+    --ivory: 38 40% 97%;
     
     /* Typography */
     --font-serif: 'Playfair Display', Georgia, serif;
     --font-sans: 'Inter', system-ui, sans-serif;
 
     /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(259 77% 64% / 0.15);
-    --shadow-elevated: 0 20px 40px -12px hsl(240 10% 10% / 0.15);
-    --shadow-card: 0 2px 12px -2px hsl(240 10% 10% / 0.08);
+    --shadow-soft: 0 4px 20px -4px hsl(30 32% 40% / 0.15);
+    --shadow-elevated: 0 20px 40px -12px hsl(30 12% 16% / 0.15);
+    --shadow-card: 0 2px 12px -2px hsl(30 12% 16% / 0.08);
 
     /* Transitions */
     --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
