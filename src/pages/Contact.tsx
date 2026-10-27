@@ -116,7 +116,7 @@ const Contact = () => {
                   <div>
                     <label
                       htmlFor="name"
-                      className="font-sans text-xs uppercase tracking-wider text-muted-foreground mb-2 block"
+                      className="font-sans text-xs uppercase tracking-wider text-foreground mb-2 block"
                     >
                       Name
                     </label>
@@ -127,14 +127,14 @@ const Contact = () => {
                         setFormData({ ...formData, name: e.target.value })
                       }
                       required
-                      className="bg-background border-border focus:border-primary"
+                      className="bg-background border-[#B39A7A] focus:border-[#8A6845] focus-visible:ring-2 focus-visible:ring-[#8A6845]/40 focus-visible:ring-offset-0"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="email"
-                      className="font-sans text-xs uppercase tracking-wider text-muted-foreground mb-2 block"
+                      className="font-sans text-xs uppercase tracking-wider text-foreground mb-2 block"
                     >
                       Email
                     </label>
@@ -146,14 +146,14 @@ const Contact = () => {
                         setFormData({ ...formData, email: e.target.value })
                       }
                       required
-                      className="bg-background border-border focus:border-primary"
+                      className="bg-background border-[#B39A7A] focus:border-[#8A6845] focus-visible:ring-2 focus-visible:ring-[#8A6845]/40 focus-visible:ring-offset-0"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="subject"
-                      className="font-sans text-xs uppercase tracking-wider text-muted-foreground mb-2 block"
+                      className="font-sans text-xs uppercase tracking-wider text-foreground mb-2 block"
                     >
                       Subject
                     </label>
@@ -164,14 +164,14 @@ const Contact = () => {
                         setFormData({ ...formData, subject: e.target.value })
                       }
                       required
-                      className="bg-background border-border focus:border-primary"
+                      className="bg-background border-[#B39A7A] focus:border-[#8A6845] focus-visible:ring-2 focus-visible:ring-[#8A6845]/40 focus-visible:ring-offset-0"
                     />
                   </div>
 
                   <div>
                     <label
                       htmlFor="message"
-                      className="font-sans text-xs uppercase tracking-wider text-muted-foreground mb-2 block"
+                      className="font-sans text-xs uppercase tracking-wider text-foreground mb-2 block"
                     >
                       Message
                     </label>
@@ -183,7 +183,7 @@ const Contact = () => {
                       }
                       required
                       rows={6}
-                      className="bg-background border-border focus:border-primary resize-none"
+                      className="bg-background border-[#B39A7A] focus:border-[#8A6845] focus-visible:ring-2 focus-visible:ring-[#8A6845]/40 focus-visible:ring-offset-0 resize-none"
                     />
                   </div>
 
