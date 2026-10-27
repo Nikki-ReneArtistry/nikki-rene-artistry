@@ -98,9 +98,17 @@ const BooksAndCards = () => {
                 <p className="font-sans text-foreground/80 leading-relaxed mb-6">
                   A reflection card deck featuring original artwork by Nikki Rene. Choose a card intentionally or pull one at random, settle in with a grounding thought, explore a practical next step, and return to a question when you’re ready to reflect.
                 </p>
-                <p className="font-serif text-3xl text-primary mb-2">$25</p>
-                <p className="font-sans text-sm text-muted-foreground mb-6">+ shipping (calculated at checkout)</p>
-                <p className="font-sans text-sm text-muted-foreground">Deck orders are packed and shipped directly by Nikki Rene Artistry.</p>
+                <p className="font-serif text-3xl text-primary mb-2">$25 + $7.50 shipping &amp; handling</p>
+                <p className="font-sans text-sm text-muted-foreground mb-6">U.S. shipping only. Applicable tax calculated at checkout.</p>
+                <a
+                  href="https://buy.stripe.com/3cI8wQ6Be9qJezL2js2oE3e"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-primary inline-block"
+                >
+                  Buy the Deck
+                </a>
+                <p className="font-sans text-sm text-muted-foreground mt-4">Deck orders are packed and shipped directly by Nikki Rene Artistry.</p>
               </div>
             </section>
           </div>
