@@ -46,16 +46,16 @@ const About = () => {
               <h2 className="font-serif text-3xl md:text-4xl mb-8">The Creative Process</h2>
               <div className="grid md:grid-cols-3 gap-12 text-left mt-12">
                 <div>
-                  <h3 className="font-serif text-xl mb-4 text-primary">Intention</h3>
-                  <p className="font-sans text-muted-foreground">Every piece begins with a moment of stillness—a meditation on the emotion I wish to capture and share with the world.</p>
+                  <h3 className="font-serif text-xl mb-4 text-primary">Curiosity</h3>
+                  <p className="font-sans text-muted-foreground">A piece might begin with a color, a scrap of paper, an interesting texture, or an idea I want to explore. I start with that spark and see where it leads.</p>
                 </div>
                 <div>
-                  <h3 className="font-serif text-xl mb-4 text-primary">Flow</h3>
-                  <p className="font-sans text-muted-foreground">I allow the work to evolve naturally, trusting the process and letting intuition guide each brushstroke and color choice.</p>
+                  <h3 className="font-serif text-xl mb-4 text-primary">Exploration</h3>
+                  <p className="font-sans text-muted-foreground">I pour, layer, collage, and experiment, responding to what happens along the way. Sometimes I follow the original idea; sometimes the materials take me somewhere unexpected.</p>
                 </div>
                 <div>
                   <h3 className="font-serif text-xl mb-4 text-primary">Connection</h3>
-                  <p className="font-sans text-muted-foreground">The final piece is complete when it speaks—when it creates that ineffable connection between art and viewer.</p>
+                  <p className="font-sans text-muted-foreground">I hope each finished piece gives someone something to connect with—a feeling, a memory, or simply the pleasure of looking closer.</p>
                 </div>
               </div>
             </div>
