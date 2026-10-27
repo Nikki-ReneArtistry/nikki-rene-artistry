@@ -122,7 +122,7 @@ const HeroSection = () => {
             }`}
           >
             <img
-              src="/assets/WhereStillnessTakesRoot.jpg"
+              src="/assets/WhereStillnessTakesRoot%20copy.jpg"
               alt="Where Stillness Takes Root — original mixed media by Nikki Rene"
               className="w-full h-auto block"
               style={{
