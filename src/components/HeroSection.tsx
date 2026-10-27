@@ -12,12 +12,10 @@ const HeroSection = () => {
 
   return (
     <section className="min-h-screen flex items-center" style={{ backgroundColor: "#F7F3EB" }}>
-      <div className="container mx-auto px-6 pt-28 pb-16 md:pb-20">
-        <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-
-          {/* Left — intro text */}
+      <div className="container mx-auto px-6 pt-28 pb-12 md:pb-20">
+        <div className="grid grid-cols-1 lg:grid-cols-[42%_58%] items-center gap-8 lg:gap-16">
           <div
-            className={`lg:w-[42%] flex flex-col gap-6 transition-all duration-1000 ${
+            className={`lg:col-start-1 lg:row-start-1 flex flex-col gap-5 transition-all duration-1000 ${
               isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
             }`}
           >
@@ -43,15 +41,27 @@ const HeroSection = () => {
             >
               Original mixed-media art inspired by nature, texture, and the beauty of becoming.
             </p>
+          </div>
 
-            <p
-              className="font-serif italic text-sm"
-              style={{ color: "#8A6845" }}
-            >
-              No Two Alike.
-            </p>
+          <div
+            className={`lg:col-start-2 lg:row-span-2 w-full transition-all duration-1000 delay-300 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
+            <img
+              src="/assets/WhereStillnessTakesRoot%20copy.jpg"
+              alt="Where Stillness Takes Root — original mixed media by Nikki Rene"
+              className="w-full h-auto block"
+              style={{ boxShadow: "0 12px 48px -8px rgba(41,39,34,0.18)" }}
+            />
+          </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 mt-2">
+          <div
+            className={`lg:col-start-1 lg:row-start-2 flex flex-col gap-5 transition-all duration-1000 delay-500 ${
+              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+            }`}
+          >
+            <div className="flex flex-col sm:flex-row gap-3">
               <Link
                 to="/collection"
                 className="inline-flex items-center justify-center px-7 py-3 font-sans text-sm tracking-wide transition-all duration-300"
@@ -78,8 +88,11 @@ const HeroSection = () => {
               </Link>
             </div>
 
-            {/* Social links */}
-            <div className="flex gap-5 mt-1">
+            <p className="font-serif italic text-sm" style={{ color: "#8A6845" }}>
+              No Two Alike.
+            </p>
+
+            <div className="flex gap-5">
               <a
                 href="https://www.facebook.com/nikki.rene.artistry.2025/"
                 target="_blank"
@@ -109,28 +122,11 @@ const HeroSection = () => {
                 aria-label="TikTok"
               >
                 <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5">
-                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.34-6.34V8.7a8.16 8.16 0 0 0 4.76 1.52v-3.4a4.85 4.85 0 0 1-1-.13z" />
+                  <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1v-3.5a6.37 6.37 0 0 0-.79-.05A6.34 6.34 0 0 0 3.15 15a6.34 6.34 0 0 0 6.34 6.34 6.34 0 0 0 6.34-6.34V8.7a8.16 8.16 0 0 0 4.76 1.52v-3.4a4.85 4.85 0 0 1-1-.13z" />
                 </svg>
               </a>
             </div>
           </div>
-
-          {/* Right — featured painting */}
-          <div
-            className={`lg:w-[58%] w-full transition-all duration-1000 delay-300 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-            }`}
-          >
-            <img
-              src="/assets/WhereStillnessTakesRoot%20copy.jpg"
-              alt="Where Stillness Takes Root — original mixed media by Nikki Rene"
-              className="w-full h-auto block"
-              style={{
-                boxShadow: "0 12px 48px -8px rgba(41,39,34,0.18)",
-              }}
-            />
-          </div>
-
         </div>
       </div>
     </section>
