@@ -29,9 +29,9 @@ const About = () => {
 
             <div className={`lg:col-start-2 lg:row-start-2 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
               <div className="space-y-5 font-sans text-foreground/80 leading-relaxed">
-                <p>I'm Nikki Rene, a mixed-media artist based in Austin, Texas. I create through layers of paint, paper, fabric, texture, and found elements, exploring the stories we carry and the ways we keep becoming. My studio is a place for curiosity and experimentation.</p>
+                <p>From my studio in Austin, Texas, I create through layers of paint, paper, fabric, texture, and found elements, exploring the stories we carry and the ways we keep becoming. My studio is a place for curiosity and experimentation.</p>
                 <p>A flowing wash of color might become a landscape; a scrap of vintage paper might shape an entirely new story. I follow those possibilities, building, reworking, and discovering what each piece can become.</p>
-                <p>Nature, memory, resilience, and transformation are recurring threads in my work. Birds, trees, and weathered surfaces offer ways to explore both the beauty around us and the experiences within us. Some pieces invite stillness. Others make a bolder statement.</p>
+                <p>My work moves between abstraction and recognizable forms, following color, texture, and whatever sparks my curiosity. Birds, trees, and landscapes appear alongside pieces that explore pattern, movement, and the materials themselves.</p>
                 <p>Each original artwork has its own character and history. Through my paintings, books, and reflection cards, I hope to create moments of connection—something that catches your eye, stirs a memory, or helps you see part of your own story. <span className="font-serif italic text-primary">No two alike.</span></p>
               </div>
               <div className="mt-8">
