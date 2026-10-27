@@ -29,10 +29,10 @@ const About = () => {
 
             <div className={`lg:col-start-2 lg:row-start-2 transition-all duration-1000 delay-300 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}>
               <div className="space-y-5 font-sans text-foreground/80 leading-relaxed">
-                <p>Art has always been my language—a way to express what words cannot capture. Every piece I create is an intimate conversation between my soul and the canvas, a dance of color and emotion that unfolds organically.</p>
-                <p>My work is deeply influenced by the natural world, the play of light, and the subtle beauty found in everyday moments. I'm drawn to the interplay of soft and bold, delicate and powerful—seeking that perfect balance that resonates emotionally.</p>
-                <p>Each piece in my collection is truly one-of-a-kind. I never create prints or reproductions because I believe art should be as unique as the person who connects with it. <span className="font-serif italic text-primary">No two alike.</span></p>
-                <p>When you bring one of my pieces into your home, you're not just acquiring art—you're inviting a piece of my journey, my passion, and my vision into your sacred space.</p>
+                <p>I'm Nikki Rene, a mixed-media artist based in Austin, Texas. I create through layers of paint, paper, fabric, texture, and found elements, exploring the stories we carry and the ways we keep becoming. My studio is a place for curiosity and experimentation.</p>
+                <p>A flowing wash of color might become a landscape; a scrap of vintage paper might shape an entirely new story. I follow those possibilities, building, reworking, and discovering what each piece can become.</p>
+                <p>Nature, memory, resilience, and transformation are recurring threads in my work. Birds, trees, and weathered surfaces offer ways to explore both the beauty around us and the experiences within us. Some pieces invite stillness. Others make a bolder statement.</p>
+                <p>Each original artwork has its own character and history. Through my paintings, books, and reflection cards, I hope to create moments of connection—something that catches your eye, stirs a memory, or helps you see part of your own story. <span className="font-serif italic text-primary">No two alike.</span></p>
               </div>
               <div className="mt-8">
                 <Link to="/collection" className="btn-primary">Explore the Collection</Link>
