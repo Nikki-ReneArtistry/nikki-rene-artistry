@@ -98,6 +98,8 @@ const BooksAndCards = () => {
                 <p className="font-sans text-foreground/80 leading-relaxed mb-6">
                   A reflection card deck featuring original artwork by Nikki Rene. Choose a card intentionally or pull one at random, settle in with a grounding thought, explore a practical next step, and return to a question when you’re ready to reflect.
                 </p>
+                <p className="font-serif text-3xl text-primary mb-2">$25</p>
+                <p className="font-sans text-sm text-muted-foreground mb-6">+ shipping (calculated at checkout)</p>
                 <p className="font-sans text-sm text-muted-foreground">Deck orders are packed and shipped directly by Nikki Rene Artistry.</p>
               </div>
             </section>
