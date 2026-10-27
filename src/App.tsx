@@ -50,7 +50,7 @@ const App = () => {
               <Route path="/collection/:id" element={<ArtworkDetail />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="/books-and-cards" element={<BooksAndCards />} />
+              <Route path="/books-and-cards/*" element={<BooksAndCards />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
