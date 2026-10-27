@@ -158,16 +158,16 @@ const ArtworkDetail = () => {
               {/* Trust Badges */}
               <div className="grid grid-cols-3 gap-3 mt-6">
                 <div className="flex flex-col items-center text-center gap-1.5 p-3 rounded-lg bg-secondary">
-                  <Truck size={16} className="text-primary" />
-                  <span className="font-sans text-[10px] text-muted-foreground uppercase tracking-wider">Free Shipping</span>
+                  <Truck size={16} className="text-[#6B4E2E]" />
+                  <span className="font-sans text-[10px] text-foreground uppercase tracking-wider">Free Shipping</span>
                 </div>
                 <div className="flex flex-col items-center text-center gap-1.5 p-3 rounded-lg bg-secondary">
-                  <Award size={16} className="text-primary" />
-                  <span className="font-sans text-[10px] text-muted-foreground uppercase tracking-wider">Authenticated</span>
+                  <Award size={16} className="text-[#6B4E2E]" />
+                  <span className="font-sans text-[10px] text-foreground uppercase tracking-wider">Authenticated</span>
                 </div>
                 <div className="flex flex-col items-center text-center gap-1.5 p-3 rounded-lg bg-secondary">
-                  <Shield size={16} className="text-primary" />
-                  <span className="font-sans text-[10px] text-muted-foreground uppercase tracking-wider">Secure Payment</span>
+                  <Shield size={16} className="text-[#6B4E2E]" />
+                  <span className="font-sans text-[10px] text-foreground uppercase tracking-wider">Secure Payment</span>
                 </div>
               </div>
             </div>
