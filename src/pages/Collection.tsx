@@ -105,26 +105,32 @@ const Collection = () => {
       {/* Main content: sidebar + gallery */}
       <section className="pb-20">
         <div className="container mx-auto px-6">
-          {/* Mobile filter bar */}
+          {/* Mobile filter dropdown */}
           <div className="md:hidden mb-6">
-            <div className="flex gap-2 overflow-x-auto pb-2 -mx-1 px-1 scrollbar-hide">
+            <label
+              htmlFor="mobile-filter"
+              className="block font-sans text-[11px] uppercase tracking-[0.2em] text-foreground mb-2"
+            >
+              Browse by Size
+            </label>
+            <select
+              id="mobile-filter"
+              value={activeFilter}
+              onChange={(e) => handleFilterChange(e.target.value)}
+              className="w-full font-sans text-sm text-foreground bg-background border border-[#B39A7A] rounded-lg px-4 py-2.5 focus:outline-none focus:ring-2 focus:ring-[#8A6845]/40 focus:border-[#8A6845] transition-colors"
+            >
               {availableFilters.map((filter) => {
-                const isActive = activeFilter === filter.value;
+                const count =
+                  filter.value === "all"
+                    ? artworks.length
+                    : artworks.filter((a) => matchesFilter(a.size, filter.value)).length;
                 return (
-                  <button
-                    key={filter.value}
-                    onClick={() => handleFilterChange(filter.value)}
-                    className={`shrink-0 px-4 py-2 rounded-full text-xs font-sans tracking-wide transition-all duration-300 border ${
-                      isActive
-                        ? "bg-primary text-primary-foreground border-primary"
-                        : "bg-background text-muted-foreground border-border hover:border-primary/50"
-                    }`}
-                  >
-                    {filter.label}
-                  </button>
+                  <option key={filter.value} value={filter.value}>
+                    {filter.label} ({count})
+                  </option>
                 );
               })}
-            </div>
+            </select>
           </div>
 
           <div className="flex gap-8">
@@ -298,7 +304,7 @@ const ProductCard = ({ artwork, visible, delay }: ProductCardProps) => {
         transitionDelay: `${delay}ms`,
         boxShadow: isHovered
           ? "0 20px 40px -12px hsl(var(--primary) / 0.15)"
-          : "0 1px 3px hsl(var(--foreground) / 0.06)",
+          : "0 2px 8px hsl(var(--foreground) / 0.07)",
       }}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -318,8 +324,9 @@ const ProductCard = ({ artwork, visible, delay }: ProductCardProps) => {
           </div>
         )}
 
+        {/* Desktop hover overlay */}
         <div
-          className={`absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/20 to-transparent flex items-end justify-center pb-6 gap-3 transition-opacity duration-400 ${
+          className={`hidden md:flex absolute inset-0 bg-gradient-to-t from-foreground/70 via-foreground/20 to-transparent items-end justify-center pb-6 gap-3 transition-opacity duration-400 ${
             isHovered && artwork.available ? "opacity-100" : "opacity-0"
           }`}
         >
@@ -352,13 +359,45 @@ const ProductCard = ({ artwork, visible, delay }: ProductCardProps) => {
         </div>
       </div>
 
+      {/* Mobile always-visible action buttons */}
+      {artwork.available && (
+        <div className="md:hidden flex gap-2 px-4 pt-3">
+          <Link
+            to={`/collection/${artwork.id}`}
+            className="flex-1 inline-flex items-center justify-center gap-2 border border-[#B39A7A] text-foreground py-2 rounded-lg font-sans text-sm font-medium tracking-wide hover:border-primary transition-colors duration-200"
+          >
+            <Eye size={14} />
+            View
+          </Link>
+          {artwork.paymentLink ? (
+            <a
+              href={artwork.paymentLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex-1 inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground py-2 rounded-lg font-sans text-sm font-medium tracking-wide hover:bg-primary/90 transition-colors duration-200"
+            >
+              <ShoppingBag size={14} />
+              Buy
+            </a>
+          ) : (
+            <Link
+              to={`/collection/${artwork.id}`}
+              className="flex-1 inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground py-2 rounded-lg font-sans text-sm font-medium tracking-wide hover:bg-primary/90 transition-colors duration-200"
+            >
+              <ShoppingBag size={14} />
+              Buy
+            </Link>
+          )}
+        </div>
+      )}
+
       <div className="p-5">
         <Link to={`/collection/${artwork.id}`}>
-          <h3 className="font-serif text-lg mb-1.5 group-hover:text-primary transition-colors duration-300">
+          <h3 className="font-serif text-lg mb-1.5 text-foreground group-hover:text-primary transition-colors duration-300">
             {artwork.title}
           </h3>
         </Link>
-        <p className="font-sans text-xs text-muted-foreground mb-3 line-clamp-2">
+        <p className="font-sans text-xs text-foreground/70 mb-3 line-clamp-2">
           {artwork.description}
         </p>
         <div className="flex items-center justify-between">
