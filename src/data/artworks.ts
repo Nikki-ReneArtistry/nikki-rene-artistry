@@ -11,7 +11,6 @@ import ancientEchoesImg from "@/assets/ancient-echoes.jpg";
 import whisperingStonesImg from "@/assets/whispering-stones.jpg";
 import orbitOfDiversityImg from "@/assets/orbit-of-diversity.jpg";
 import etherealFusionImg from "@/assets/ethereal-fusion.jpg";
-import crackedSphereImg from "@/assets/cracked-sphere.jpg";
 import mosaicDreamImg from "@/assets/mosaic-dream.jpg";
 import veiledExpressionsImg from "@/assets/veiled-expressions.jpg";
 import shegoImg from "@/assets/shego.jpg";
@@ -321,20 +320,6 @@ export const artworks: Artwork[] = [
     available: true,
     collection: "No Two Alike",
     paymentLink: "https://buy.stripe.com/28E8wQ6BecCV8bn3nw2oE0e",
-  },
-  {
-    id: "cracked-sphere",
-    title: "Cracked Sphere",
-    description:
-      "Dark swirling brushwork alongside vibrant woven fabric in reds, greens, and golds. Wispy fiber and crackled netting create an organic, web-like overlay.",
-    image: crackedSphereImg,
-    price: 55,
-    size: '8"',
-    medium: "Mixed Media",
-    year: 2024,
-    available: true,
-    collection: "No Two Alike",
-    paymentLink: "https://buy.stripe.com/cNi9AU5xaauNbnz4rA2oE0f",
   },
   {
     id: "mosaic-dream",
