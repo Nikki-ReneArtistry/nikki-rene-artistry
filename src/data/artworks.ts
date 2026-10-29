@@ -8,7 +8,6 @@ import electromagneticImg from "@/assets/electromagnetic.jpg";
 import greenForestImg from "@/assets/green-forest.jpg";
 import rippleEffectImg from "@/assets/ripple-effect.jpg";
 import ancientEchoesImg from "@/assets/ancient-echoes.jpg";
-import mysteryInMotionImg from "@/assets/mystery-in-motion.jpg";
 import whisperingStonesImg from "@/assets/whispering-stones.jpg";
 import orbitOfDiversityImg from "@/assets/orbit-of-diversity.jpg";
 import etherealFusionImg from "@/assets/ethereal-fusion.jpg";
@@ -88,7 +87,6 @@ import intoTheWildUploadImg from "@/assets/into-the-wild-upload.jpg.asset.json";
 import savannaWhispersImg from "@/assets/savanna-whispers.jpg.asset.json";
 import mauveDevotionImg from "@/assets/mauve-devotion.jpg.asset.json";
 import layeredHorizonsImg from "@/assets/layered-horizons.jpg.asset.json";
-import mysteryInMotionUploadImg from "@/assets/mystery-in-motion-upload.jpg.asset.json";
 import jungleAwakeningImg from "@/assets/jungle-awakening.jpg.asset.json";
 import spiraledOrchardImg from "@/assets/spiraled-orchard.jpg.asset.json";
 import wintersGatheringImg from "@/assets/winters-gathering.jpg.asset.json";
@@ -281,20 +279,6 @@ export const artworks: Artwork[] = [
     available: true,
     collection: "No Two Alike",
     paymentLink: "https://buy.stripe.com/3cIcN6f7K32l9frcY62oE0a",
-  },
-  {
-    id: "mystery-in-motion",
-    title: "Mystery In Motion",
-    description:
-      "A captivating circular piece with dark, speckled textures and gold leaf accents. Pearls, jade stones, and metallic beads are arranged along a golden band.",
-    image: mysteryInMotionUploadImg.url,
-    price: 75,
-    size: '8"',
-    medium: "Mixed Media",
-    year: 2024,
-    available: true,
-    collection: "No Two Alike",
-    paymentLink: "https://buy.stripe.com/28EeVee3GbyRezL6zI2oE0b",
   },
   {
     id: "whispering-stones",
